@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>広告レポート</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../template/css/style.css">
+  <link rel="stylesheet" href="../template/css/print.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-logo">
+            <div>
+              <h1 class="header-title" id="client-name">読み込み中...</h1>
+              <p class="header-subtitle">広告パフォーマンスレポート</p>
+            </div>
+          </div>
+          <div class="header-period" id="header-period"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title">全体サマリー</h2>
+          </div>
+          <div class="kpi-grid" id="summary-kpi"></div>
+        </section>
+
+        <section class="section">
+          <div class="chart-container">
+            <div class="chart-header">
+              <h3 class="chart-title">月次推移</h3>
+              <div class="chart-legend">
+                <div class="chart-legend-item">
+                  <span class="chart-legend-color" style="background:#3b82f6;"></span><span>広告費用</span>
+                </div>
+                <div class="chart-legend-item">
+                  <span class="chart-legend-color" style="background:#10b981;"></span><span>CV数</span>
+                </div>
+              </div>
+            </div>
+            <div class="chart-canvas-wrapper"><canvas id="monthly-chart"></canvas></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title">媒体別サマリー</h2>
+          </div>
+          <div class="table-wrapper">
+            <div class="table-scroll">
+              <table class="data-table" id="platform-summary-table">
+                <thead>
+                  <tr>
+                    <th>媒体</th><th class="num">費用</th><th class="num">表示回数</th>
+                    <th class="num">クリック数</th><th class="num">CTR</th>
+                    <th class="num">CV</th><th class="num">CVR</th><th class="num">CPA</th>
+                  </tr>
+                </thead>
+                <tbody id="platform-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="chart-container">
+            <div class="chart-header">
+              <h3 class="chart-title">媒体別費用構成</h3>
+            </div>
+            <div class="chart-canvas-wrapper" style="height:250px;">
+              <canvas id="platform-chart"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title">月別レポート</h2>
+          </div>
+          <div class="link-grid" id="month-links"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer no-print">
+      <div class="container">
+        <div class="footer-inner"><p>&copy; 2026 広告レポートテンプレート</p></div>
+      </div>
+    </footer>
+    <button class="print-btn no-print" onclick="window.print()">🖨️ 印刷</button>
+  </div>
+
+  <script src="../template/js/charts.js"></script>
+  <script src="../template/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      loadData('data.json').then(function(data) {
+        if (!data) return;
+        renderSummaryPage(data);
+        initTableSort();
+      });
+    });
+  </script>
+</body>
+</html>

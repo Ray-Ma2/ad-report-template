@@ -157,11 +157,16 @@ def read_csv_file(filepath, platform, column_maps):
 
     lines = content.splitlines()
 
-    # BOM除去、空行スキップ
+    # メタデータ行・空行をスキップしてCSVヘッダを探す
+    # Google Ads等は先頭にタイトル行・期間行があるため、
+    # カンマ区切りのフィールド数が多い行をヘッダとみなす
     skip_rows = 0
+    min_fields = 4
     for line in lines:
         stripped = line.strip()
         if stripped == "" or stripped.startswith("#"):
+            skip_rows += 1
+        elif stripped.count(",") < min_fields - 1:
             skip_rows += 1
         else:
             break
@@ -203,12 +208,12 @@ def read_csv_file(filepath, platform, column_maps):
                 if resolved.get("campaign")
                 else "全体"
             ),
-            "cost": int(parse_number(row.get(resolved.get("cost"), 0))),
-            "impressions": int(
+            "cost": round(parse_number(row.get(resolved.get("cost"), 0))),
+            "impressions": round(
                 parse_number(row.get(resolved.get("impressions"), 0))
             ),
-            "clicks": int(parse_number(row.get(resolved.get("clicks"), 0))),
-            "conversions": int(
+            "clicks": round(parse_number(row.get(resolved.get("clicks"), 0))),
+            "conversions": round(
                 parse_number(row.get(resolved.get("conversions"), 0))
             ),
         }
