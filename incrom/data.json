@@ -6,14 +6,14 @@
   "months": {
     "2025-11": {
       "summary": {
-        "cost": 452813,
-        "impressions": 198376,
-        "clicks": 10013,
-        "conversions": 3694,
-        "ctr": 5.05,
-        "cvr": 36.89,
-        "cpc": 45,
-        "cpa": 122
+        "cost": 422668,
+        "impressions": 157461,
+        "clicks": 7186,
+        "conversions": 826,
+        "ctr": 4.56,
+        "cvr": 11.49,
+        "cpc": 58,
+        "cpa": 511
       },
       "previousMonthChange": {
         "cost": 0,
@@ -55,13 +55,13 @@
           ]
         },
         "meta": {
-          "cost": 239906,
-          "impressions": 187070,
-          "clicks": 7651,
-          "conversions": 3417,
-          "ctr": 4.09,
-          "cvr": 44.66,
-          "cpa": 70,
+          "cost": 209761,
+          "impressions": 146155,
+          "clicks": 4824,
+          "conversions": 549,
+          "ctr": 3.3,
+          "cvr": 11.38,
+          "cpa": 382,
           "cpaChange": 0,
           "campaigns": [
             {
@@ -79,84 +79,84 @@
               "clicks": 2551,
               "conversions": 291,
               "cpa": 360
-            },
-            {
-              "name": "トラフィック",
-              "cost": 30145,
-              "impressions": 40915,
-              "clicks": 2827,
-              "conversions": 2868,
-              "cpa": 10
             }
-          ]
+          ],
+          "traffic": {
+            "name": "トラフィック",
+            "cost": 30145,
+            "impressions": 40915,
+            "clicks": 2827,
+            "results": 2868,
+            "resultType": "Instagramプロフィールへのアクセス"
+          }
         }
       },
       "weeks": {
         "week1": {
           "dates": "2025-11-01 ~ 2025-11-07",
           "summary": {
-            "cost": 106485,
-            "impressions": 52484,
-            "clicks": 2694,
-            "conversions": 944,
-            "cpa": 112
+            "cost": 99489,
+            "impressions": 41701,
+            "clicks": 1982,
+            "conversions": 211,
+            "cpa": 471
           },
           "daily": [
             {
               "date": "2025-11-01",
               "dayOfWeek": "土",
-              "cost": 13170,
-              "impressions": 6437,
-              "clicks": 340,
-              "conversions": 134
+              "cost": 12199,
+              "impressions": 4860,
+              "clicks": 227,
+              "conversions": 18
             },
             {
               "date": "2025-11-02",
               "dayOfWeek": "日",
-              "cost": 15683,
-              "impressions": 9893,
-              "clicks": 455,
-              "conversions": 154
+              "cost": 14578,
+              "impressions": 8142,
+              "clicks": 338,
+              "conversions": 33
             },
             {
               "date": "2025-11-03",
               "dayOfWeek": "月",
-              "cost": 17448,
-              "impressions": 8877,
-              "clicks": 438,
-              "conversions": 146
+              "cost": 16429,
+              "impressions": 7166,
+              "clicks": 334,
+              "conversions": 37
             },
             {
               "date": "2025-11-04",
               "dayOfWeek": "火",
-              "cost": 15158,
-              "impressions": 7302,
-              "clicks": 380,
-              "conversions": 132
+              "cost": 14167,
+              "impressions": 5701,
+              "clicks": 279,
+              "conversions": 28
             },
             {
               "date": "2025-11-05",
               "dayOfWeek": "水",
-              "cost": 15726,
-              "impressions": 6544,
-              "clicks": 383,
-              "conversions": 158
+              "cost": 14739,
+              "impressions": 5139,
+              "clicks": 266,
+              "conversions": 39
             },
             {
               "date": "2025-11-06",
               "dayOfWeek": "木",
-              "cost": 16166,
-              "impressions": 6945,
-              "clicks": 370,
-              "conversions": 109
+              "cost": 15206,
+              "impressions": 5516,
+              "clicks": 291,
+              "conversions": 29
             },
             {
               "date": "2025-11-07",
               "dayOfWeek": "金",
-              "cost": 13134,
-              "impressions": 6486,
-              "clicks": 328,
-              "conversions": 111
+              "cost": 12171,
+              "impressions": 5177,
+              "clicks": 247,
+              "conversions": 27
             }
           ],
           "platforms": {
@@ -170,81 +170,81 @@
               "cpa": 961
             },
             "meta": {
-              "cost": 54581,
-              "impressions": 49401,
-              "clicks": 2129,
-              "conversions": 890,
-              "ctr": 4.31,
-              "cvr": 41.8,
-              "cpa": 61
+              "cost": 47585,
+              "impressions": 38618,
+              "clicks": 1417,
+              "conversions": 157,
+              "ctr": 3.67,
+              "cvr": 11.08,
+              "cpa": 303
             }
           }
         },
         "week2": {
           "dates": "2025-11-08 ~ 2025-11-14",
           "summary": {
-            "cost": 109070,
-            "impressions": 51191,
-            "clicks": 2528,
-            "conversions": 893,
-            "cpa": 122
+            "cost": 102039,
+            "impressions": 41150,
+            "clicks": 1845,
+            "conversions": 203,
+            "cpa": 502
           },
           "daily": [
             {
               "date": "2025-11-08",
               "dayOfWeek": "土",
-              "cost": 13687,
-              "impressions": 7696,
-              "clicks": 354,
-              "conversions": 129
+              "cost": 12713,
+              "impressions": 6297,
+              "clicks": 253,
+              "conversions": 25
             },
             {
               "date": "2025-11-09",
               "dayOfWeek": "日",
-              "cost": 16234,
-              "impressions": 9072,
-              "clicks": 416,
-              "conversions": 142
+              "cost": 15057,
+              "impressions": 7299,
+              "clicks": 299,
+              "conversions": 22
             },
             {
               "date": "2025-11-10",
               "dayOfWeek": "月",
-              "cost": 16972,
-              "impressions": 7766,
-              "clicks": 375,
-              "conversions": 124
+              "cost": 15977,
+              "impressions": 6310,
+              "clicks": 290,
+              "conversions": 41
             },
             {
               "date": "2025-11-11",
               "dayOfWeek": "火",
-              "cost": 16168,
-              "impressions": 7174,
-              "clicks": 350,
-              "conversions": 115
+              "cost": 15198,
+              "impressions": 5798,
+              "clicks": 261,
+              "conversions": 26
             },
             {
               "date": "2025-11-12",
               "dayOfWeek": "水",
-              "cost": 15819,
-              "impressions": 6760,
-              "clicks": 361,
-              "conversions": 124
+              "cost": 14807,
+              "impressions": 5318,
+              "clicks": 260,
+              "conversions": 23
             },
             {
               "date": "2025-11-13",
               "dayOfWeek": "木",
-              "cost": 14244,
-              "impressions": 6577,
-              "clicks": 328,
-              "conversions": 124
+              "cost": 13304,
+              "impressions": 5254,
+              "clicks": 244,
+              "conversions": 39
             },
             {
               "date": "2025-11-14",
               "dayOfWeek": "金",
-              "cost": 15946,
-              "impressions": 6146,
-              "clicks": 344,
-              "conversions": 135
+              "cost": 14983,
+              "impressions": 4874,
+              "clicks": 238,
+              "conversions": 27
             }
           ],
           "platforms": {
@@ -258,81 +258,81 @@
               "cpa": 802
             },
             "meta": {
-              "cost": 56093,
-              "impressions": 48438,
-              "clicks": 1911,
-              "conversions": 827,
-              "ctr": 3.95,
-              "cvr": 43.28,
-              "cpa": 67
+              "cost": 49062,
+              "impressions": 38397,
+              "clicks": 1228,
+              "conversions": 137,
+              "ctr": 3.2,
+              "cvr": 11.16,
+              "cpa": 358
             }
           }
         },
         "week3": {
           "dates": "2025-11-15 ~ 2025-11-21",
           "summary": {
-            "cost": 104838,
-            "impressions": 45354,
-            "clicks": 2244,
-            "conversions": 869,
-            "cpa": 120
+            "cost": 97864,
+            "impressions": 36084,
+            "clicks": 1587,
+            "conversions": 204,
+            "cpa": 479
           },
           "daily": [
             {
               "date": "2025-11-15",
               "dayOfWeek": "土",
-              "cost": 14160,
-              "impressions": 6068,
-              "clicks": 334,
-              "conversions": 126
+              "cost": 13219,
+              "impressions": 4809,
+              "clicks": 233,
+              "conversions": 25
             },
             {
               "date": "2025-11-16",
               "dayOfWeek": "日",
-              "cost": 15574,
-              "impressions": 7957,
-              "clicks": 340,
-              "conversions": 165
+              "cost": 14410,
+              "impressions": 6322,
+              "clicks": 208,
+              "conversions": 32
             },
             {
               "date": "2025-11-17",
               "dayOfWeek": "月",
-              "cost": 15100,
-              "impressions": 7066,
-              "clicks": 348,
-              "conversions": 132
+              "cost": 14044,
+              "impressions": 5614,
+              "clicks": 244,
+              "conversions": 25
             },
             {
               "date": "2025-11-18",
               "dayOfWeek": "火",
-              "cost": 15205,
-              "impressions": 6507,
-              "clicks": 350,
-              "conversions": 124
+              "cost": 14202,
+              "impressions": 5076,
+              "clicks": 266,
+              "conversions": 36
             },
             {
               "date": "2025-11-19",
               "dayOfWeek": "水",
-              "cost": 14464,
-              "impressions": 6221,
-              "clicks": 318,
-              "conversions": 124
+              "cost": 13525,
+              "impressions": 4999,
+              "clicks": 233,
+              "conversions": 38
             },
             {
               "date": "2025-11-20",
               "dayOfWeek": "木",
-              "cost": 15100,
-              "impressions": 5825,
-              "clicks": 277,
-              "conversions": 94
+              "cost": 14166,
+              "impressions": 4700,
+              "clicks": 206,
+              "conversions": 23
             },
             {
               "date": "2025-11-21",
               "dayOfWeek": "金",
-              "cost": 15235,
-              "impressions": 5710,
-              "clicks": 277,
-              "conversions": 104
+              "cost": 14298,
+              "impressions": 4564,
+              "clicks": 197,
+              "conversions": 25
             }
           ],
           "platforms": {
@@ -346,81 +346,81 @@
               "cpa": 637
             },
             "meta": {
-              "cost": 55771,
-              "impressions": 42645,
-              "clicks": 1698,
-              "conversions": 792,
-              "ctr": 3.98,
-              "cvr": 46.64,
-              "cpa": 70
+              "cost": 48797,
+              "impressions": 33375,
+              "clicks": 1041,
+              "conversions": 127,
+              "ctr": 3.12,
+              "cvr": 12.2,
+              "cpa": 384
             }
           }
         },
         "week4": {
           "dates": "2025-11-22 ~ 2025-11-28",
           "summary": {
-            "cost": 102877,
-            "impressions": 38106,
-            "clicks": 1994,
-            "conversions": 770,
-            "cpa": 133
+            "cost": 95858,
+            "impressions": 29667,
+            "clicks": 1396,
+            "conversions": 168,
+            "cpa": 570
           },
           "daily": [
             {
               "date": "2025-11-22",
               "dayOfWeek": "土",
-              "cost": 13783,
-              "impressions": 5523,
-              "clicks": 267,
-              "conversions": 99
+              "cost": 12820,
+              "impressions": 4345,
+              "clicks": 186,
+              "conversions": 16
             },
             {
               "date": "2025-11-23",
               "dayOfWeek": "日",
-              "cost": 15803,
-              "impressions": 6237,
-              "clicks": 316,
-              "conversions": 117
+              "cost": 14674,
+              "impressions": 4841,
+              "clicks": 223,
+              "conversions": 27
             },
             {
               "date": "2025-11-24",
               "dayOfWeek": "月",
-              "cost": 15183,
-              "impressions": 5779,
-              "clicks": 296,
-              "conversions": 122
+              "cost": 14154,
+              "impressions": 4477,
+              "clicks": 207,
+              "conversions": 33
             },
             {
               "date": "2025-11-25",
               "dayOfWeek": "火",
-              "cost": 14924,
-              "impressions": 5373,
-              "clicks": 302,
-              "conversions": 120
+              "cost": 13940,
+              "impressions": 4184,
+              "clicks": 211,
+              "conversions": 27
             },
             {
               "date": "2025-11-26",
               "dayOfWeek": "水",
-              "cost": 14494,
-              "impressions": 5211,
-              "clicks": 274,
-              "conversions": 97
+              "cost": 13507,
+              "impressions": 4041,
+              "clicks": 192,
+              "conversions": 14
             },
             {
               "date": "2025-11-27",
               "dayOfWeek": "木",
-              "cost": 14352,
-              "impressions": 4962,
-              "clicks": 277,
-              "conversions": 117
+              "cost": 13370,
+              "impressions": 3843,
+              "clicks": 189,
+              "conversions": 27
             },
             {
               "date": "2025-11-28",
               "dayOfWeek": "金",
-              "cost": 14338,
-              "impressions": 5021,
-              "clicks": 262,
-              "conversions": 98
+              "cost": 13393,
+              "impressions": 3936,
+              "clicks": 188,
+              "conversions": 24
             }
           ],
           "platforms": {
@@ -434,41 +434,41 @@
               "cpa": 729
             },
             "meta": {
-              "cost": 56211,
-              "impressions": 35865,
-              "clicks": 1482,
-              "conversions": 706,
-              "ctr": 4.13,
-              "cvr": 47.64,
-              "cpa": 79
+              "cost": 49192,
+              "impressions": 27426,
+              "clicks": 884,
+              "conversions": 104,
+              "ctr": 3.22,
+              "cvr": 11.76,
+              "cpa": 473
             }
           }
         },
         "week5": {
           "dates": "2025-11-29 ~ 2025-11-30",
           "summary": {
-            "cost": 29543,
-            "impressions": 11241,
-            "clicks": 553,
-            "conversions": 218,
-            "cpa": 135
+            "cost": 27418,
+            "impressions": 8859,
+            "clicks": 376,
+            "conversions": 40,
+            "cpa": 685
           },
           "daily": [
             {
               "date": "2025-11-29",
               "dayOfWeek": "土",
-              "cost": 13947,
-              "impressions": 4955,
-              "clicks": 232,
-              "conversions": 93
+              "cost": 13005,
+              "impressions": 3915,
+              "clicks": 162,
+              "conversions": 23
             },
             {
               "date": "2025-11-30",
               "dayOfWeek": "日",
-              "cost": 15596,
-              "impressions": 6286,
-              "clicks": 321,
-              "conversions": 125
+              "cost": 14413,
+              "impressions": 4944,
+              "clicks": 214,
+              "conversions": 17
             }
           ],
           "platforms": {
@@ -482,13 +482,13 @@
               "cpa": 768
             },
             "meta": {
-              "cost": 17250,
-              "impressions": 10721,
-              "clicks": 431,
-              "conversions": 202,
-              "ctr": 4.02,
-              "cvr": 46.87,
-              "cpa": 85
+              "cost": 15125,
+              "impressions": 8339,
+              "clicks": 254,
+              "conversions": 24,
+              "ctr": 3.05,
+              "cvr": 9.45,
+              "cpa": 630
             }
           }
         }
@@ -496,24 +496,24 @@
     },
     "2025-12": {
       "summary": {
-        "cost": 604653,
-        "impressions": 256633,
-        "clicks": 11021,
-        "conversions": 3748,
-        "ctr": 4.29,
-        "cvr": 34.01,
-        "cpc": 54,
-        "cpa": 161
+        "cost": 573711,
+        "impressions": 215401,
+        "clicks": 8322,
+        "conversions": 1018,
+        "ctr": 3.86,
+        "cvr": 12.23,
+        "cpc": 68,
+        "cpa": 563
       },
       "previousMonthChange": {
-        "cost": 33.5,
-        "impressions": 29.4,
-        "clicks": 10.1,
-        "conversions": 1.5,
-        "ctr": -15.0,
-        "cvr": -7.8,
-        "cpc": 20.0,
-        "cpa": 32.0
+        "cost": 35.7,
+        "impressions": 36.8,
+        "clicks": 15.8,
+        "conversions": 23.2,
+        "ctr": -15.4,
+        "cvr": 6.4,
+        "cpc": 17.2,
+        "cpa": 10.2
       },
       "platforms": {
         "google": {
@@ -545,14 +545,14 @@
           ]
         },
         "meta": {
-          "cost": 349022,
-          "impressions": 243871,
-          "clicks": 8458,
-          "conversions": 3461,
-          "ctr": 3.47,
-          "cvr": 40.92,
-          "cpa": 100,
-          "cpaChange": 42.9,
+          "cost": 318080,
+          "impressions": 202639,
+          "clicks": 5759,
+          "conversions": 731,
+          "ctr": 2.84,
+          "cvr": 12.69,
+          "cpa": 435,
+          "cpaChange": 13.9,
           "campaigns": [
             {
               "name": "411_関東_1865_カルーセル_新LP",
@@ -593,84 +593,84 @@
               "clicks": 3198,
               "conversions": 333,
               "cpa": 473
-            },
-            {
-              "name": "トラフィック",
-              "cost": 30942,
-              "impressions": 41232,
-              "clicks": 2699,
-              "conversions": 2730,
-              "cpa": 11
             }
-          ]
+          ],
+          "traffic": {
+            "name": "トラフィック",
+            "cost": 30942,
+            "impressions": 41232,
+            "clicks": 2699,
+            "results": 2730,
+            "resultType": "Instagramプロフィールへのアクセス"
+          }
         }
       },
       "weeks": {
         "week1": {
           "dates": "2025-12-01 ~ 2025-12-07",
           "summary": {
-            "cost": 106373,
-            "impressions": 41302,
-            "clicks": 2204,
-            "conversions": 808,
-            "cpa": 131
+            "cost": 99402,
+            "impressions": 32427,
+            "clicks": 1565,
+            "conversions": 159,
+            "cpa": 625
           },
           "daily": [
             {
               "date": "2025-12-01",
               "dayOfWeek": "月",
-              "cost": 15582,
-              "impressions": 5918,
-              "clicks": 316,
-              "conversions": 104
+              "cost": 14576,
+              "impressions": 4679,
+              "clicks": 236,
+              "conversions": 24
             },
             {
               "date": "2025-12-02",
               "dayOfWeek": "火",
-              "cost": 15086,
-              "impressions": 5716,
-              "clicks": 339,
-              "conversions": 122
+              "cost": 14095,
+              "impressions": 4517,
+              "clicks": 247,
+              "conversions": 29
             },
             {
               "date": "2025-12-03",
               "dayOfWeek": "水",
-              "cost": 14936,
-              "impressions": 6102,
-              "clicks": 278,
-              "conversions": 107
+              "cost": 13945,
+              "impressions": 4742,
+              "clicks": 198,
+              "conversions": 24
             },
             {
               "date": "2025-12-04",
               "dayOfWeek": "木",
-              "cost": 14666,
-              "impressions": 5280,
-              "clicks": 294,
-              "conversions": 100
+              "cost": 13750,
+              "impressions": 4122,
+              "clicks": 214,
+              "conversions": 19
             },
             {
               "date": "2025-12-05",
               "dayOfWeek": "金",
-              "cost": 14694,
-              "impressions": 5398,
-              "clicks": 316,
-              "conversions": 120
+              "cost": 13726,
+              "impressions": 4138,
+              "clicks": 221,
+              "conversions": 21
             },
             {
               "date": "2025-12-06",
               "dayOfWeek": "土",
-              "cost": 14834,
-              "impressions": 5840,
-              "clicks": 296,
-              "conversions": 120
+              "cost": 13889,
+              "impressions": 4645,
+              "clicks": 197,
+              "conversions": 19
             },
             {
               "date": "2025-12-07",
               "dayOfWeek": "日",
-              "cost": 16575,
-              "impressions": 7048,
-              "clicks": 365,
-              "conversions": 135
+              "cost": 15421,
+              "impressions": 5584,
+              "clicks": 252,
+              "conversions": 23
             }
           ],
           "platforms": {
@@ -684,81 +684,81 @@
               "cpa": 1008
             },
             "meta": {
-              "cost": 55943,
-              "impressions": 38903,
-              "clicks": 1649,
-              "conversions": 758,
-              "ctr": 4.24,
-              "cvr": 45.97,
-              "cpa": 73
+              "cost": 48972,
+              "impressions": 30028,
+              "clicks": 1010,
+              "conversions": 109,
+              "ctr": 3.36,
+              "cvr": 10.79,
+              "cpa": 449
             }
           }
         },
         "week2": {
           "dates": "2025-12-08 ~ 2025-12-14",
           "summary": {
-            "cost": 107172,
-            "impressions": 40714,
-            "clicks": 2256,
-            "conversions": 855,
-            "cpa": 125
+            "cost": 100196,
+            "impressions": 31707,
+            "clicks": 1629,
+            "conversions": 211,
+            "cpa": 474
           },
           "daily": [
             {
               "date": "2025-12-08",
               "dayOfWeek": "月",
-              "cost": 15209,
-              "impressions": 5677,
-              "clicks": 319,
-              "conversions": 131
+              "cost": 14174,
+              "impressions": 4295,
+              "clicks": 224,
+              "conversions": 35
             },
             {
               "date": "2025-12-09",
               "dayOfWeek": "火",
-              "cost": 15033,
-              "impressions": 5718,
-              "clicks": 300,
-              "conversions": 140
+              "cost": 14047,
+              "impressions": 4399,
+              "clicks": 188,
+              "conversions": 25
             },
             {
               "date": "2025-12-10",
               "dayOfWeek": "水",
-              "cost": 14584,
-              "impressions": 5579,
-              "clicks": 286,
-              "conversions": 110
+              "cost": 13596,
+              "impressions": 4248,
+              "clicks": 194,
+              "conversions": 16
             },
             {
               "date": "2025-12-11",
               "dayOfWeek": "木",
-              "cost": 14859,
-              "impressions": 5666,
-              "clicks": 285,
-              "conversions": 111
+              "cost": 13912,
+              "impressions": 4432,
+              "clicks": 197,
+              "conversions": 19
             },
             {
               "date": "2025-12-12",
               "dayOfWeek": "金",
-              "cost": 17844,
-              "impressions": 7094,
-              "clicks": 413,
-              "conversions": 126
+              "cost": 16887,
+              "impressions": 5923,
+              "clicks": 334,
+              "conversions": 43
             },
             {
               "date": "2025-12-13",
               "dayOfWeek": "土",
-              "cost": 12681,
-              "impressions": 4113,
-              "clicks": 282,
-              "conversions": 102
+              "cost": 11748,
+              "impressions": 2967,
+              "clicks": 214,
+              "conversions": 34
             },
             {
               "date": "2025-12-14",
               "dayOfWeek": "日",
-              "cost": 16962,
-              "impressions": 6867,
-              "clicks": 371,
-              "conversions": 135
+              "cost": 15832,
+              "impressions": 5443,
+              "clicks": 278,
+              "conversions": 39
             }
           ],
           "platforms": {
@@ -772,81 +772,81 @@
               "cpa": 845
             },
             "meta": {
-              "cost": 58123,
-              "impressions": 38266,
-              "clicks": 1742,
-              "conversions": 797,
-              "ctr": 4.55,
-              "cvr": 45.75,
-              "cpa": 72
+              "cost": 51147,
+              "impressions": 29259,
+              "clicks": 1115,
+              "conversions": 153,
+              "ctr": 3.81,
+              "cvr": 13.72,
+              "cpa": 334
             }
           }
         },
         "week3": {
           "dates": "2025-12-15 ~ 2025-12-21",
           "summary": {
-            "cost": 162993,
-            "impressions": 64706,
-            "clicks": 2843,
-            "conversions": 901,
-            "cpa": 180
+            "cost": 156015,
+            "impressions": 56164,
+            "clicks": 2254,
+            "conversions": 308,
+            "cpa": 506
           },
           "daily": [
             {
               "date": "2025-12-15",
               "dayOfWeek": "月",
-              "cost": 16176,
-              "impressions": 6151,
-              "clicks": 360,
-              "conversions": 140
+              "cost": 15134,
+              "impressions": 4833,
+              "clicks": 255,
+              "conversions": 32
             },
             {
               "date": "2025-12-16",
               "dayOfWeek": "火",
-              "cost": 16648,
-              "impressions": 6320,
-              "clicks": 348,
-              "conversions": 135
+              "cost": 15634,
+              "impressions": 5126,
+              "clicks": 253,
+              "conversions": 38
             },
             {
               "date": "2025-12-17",
               "dayOfWeek": "水",
-              "cost": 31547,
-              "impressions": 12588,
-              "clicks": 544,
-              "conversions": 139
+              "cost": 30550,
+              "impressions": 11320,
+              "clicks": 460,
+              "conversions": 54
             },
             {
               "date": "2025-12-18",
               "dayOfWeek": "木",
-              "cost": 27043,
-              "impressions": 10663,
-              "clicks": 447,
-              "conversions": 121
+              "cost": 26076,
+              "impressions": 9474,
+              "clicks": 367,
+              "conversions": 42
             },
             {
               "date": "2025-12-19",
               "dayOfWeek": "金",
-              "cost": 21956,
-              "impressions": 8829,
-              "clicks": 398,
-              "conversions": 137
+              "cost": 21009,
+              "impressions": 7706,
+              "clicks": 307,
+              "conversions": 48
             },
             {
               "date": "2025-12-20",
               "dayOfWeek": "土",
-              "cost": 22262,
-              "impressions": 8799,
-              "clicks": 346,
-              "conversions": 104
+              "cost": 21360,
+              "impressions": 7678,
+              "clicks": 287,
+              "conversions": 45
             },
             {
               "date": "2025-12-21",
               "dayOfWeek": "日",
-              "cost": 27361,
-              "impressions": 11356,
-              "clicks": 400,
-              "conversions": 125
+              "cost": 26252,
+              "impressions": 10027,
+              "clicks": 325,
+              "conversions": 49
             }
           ],
           "platforms": {
@@ -860,81 +860,81 @@
               "cpa": 834
             },
             "meta": {
-              "cost": 100443,
-              "impressions": 61806,
-              "clicks": 2256,
-              "conversions": 826,
-              "ctr": 3.65,
-              "cvr": 36.61,
-              "cpa": 121
+              "cost": 93465,
+              "impressions": 53264,
+              "clicks": 1667,
+              "conversions": 233,
+              "ctr": 3.13,
+              "cvr": 13.98,
+              "cpa": 401
             }
           }
         },
         "week4": {
           "dates": "2025-12-22 ~ 2025-12-28",
           "summary": {
-            "cost": 165898,
-            "impressions": 78001,
-            "clicks": 2644,
-            "conversions": 824,
-            "cpa": 201
+            "cost": 158860,
+            "impressions": 68442,
+            "clicks": 2073,
+            "conversions": 254,
+            "cpa": 625
           },
           "daily": [
             {
               "date": "2025-12-22",
               "dayOfWeek": "月",
-              "cost": 23484,
-              "impressions": 10362,
-              "clicks": 364,
-              "conversions": 107
+              "cost": 22403,
+              "impressions": 9135,
+              "clicks": 281,
+              "conversions": 25
             },
             {
               "date": "2025-12-23",
               "dayOfWeek": "火",
-              "cost": 23274,
-              "impressions": 9457,
-              "clicks": 364,
-              "conversions": 115
+              "cost": 22289,
+              "impressions": 8296,
+              "clicks": 292,
+              "conversions": 43
             },
             {
               "date": "2025-12-24",
               "dayOfWeek": "水",
-              "cost": 24204,
-              "impressions": 10284,
-              "clicks": 363,
-              "conversions": 106
+              "cost": 23241,
+              "impressions": 9099,
+              "clicks": 294,
+              "conversions": 38
             },
             {
               "date": "2025-12-25",
               "dayOfWeek": "木",
-              "cost": 21326,
-              "impressions": 11255,
-              "clicks": 324,
-              "conversions": 107
+              "cost": 20352,
+              "impressions": 9897,
+              "clicks": 251,
+              "conversions": 35
             },
             {
               "date": "2025-12-26",
               "dayOfWeek": "金",
-              "cost": 24495,
-              "impressions": 10917,
-              "clicks": 408,
-              "conversions": 132
+              "cost": 23542,
+              "impressions": 9547,
+              "clicks": 325,
+              "conversions": 48
             },
             {
               "date": "2025-12-27",
               "dayOfWeek": "土",
-              "cost": 25505,
-              "impressions": 12508,
-              "clicks": 408,
-              "conversions": 124
+              "cost": 24570,
+              "impressions": 11040,
+              "clicks": 320,
+              "conversions": 35
             },
             {
               "date": "2025-12-28",
               "dayOfWeek": "日",
-              "cost": 23610,
-              "impressions": 13218,
-              "clicks": 413,
-              "conversions": 133
+              "cost": 22463,
+              "impressions": 11428,
+              "clicks": 310,
+              "conversions": 30
             }
           ],
           "platforms": {
@@ -948,49 +948,49 @@
               "cpa": 791
             },
             "meta": {
-              "cost": 97837,
-              "impressions": 74389,
-              "clicks": 1983,
-              "conversions": 738,
-              "ctr": 2.67,
-              "cvr": 37.22,
-              "cpa": 132
+              "cost": 90799,
+              "impressions": 64830,
+              "clicks": 1412,
+              "conversions": 168,
+              "ctr": 2.18,
+              "cvr": 11.9,
+              "cpa": 540
             }
           }
         },
         "week5": {
           "dates": "2025-12-29 ~ 2025-12-31",
           "summary": {
-            "cost": 62217,
-            "impressions": 31910,
-            "clicks": 1074,
-            "conversions": 360,
-            "cpa": 172
+            "cost": 59238,
+            "impressions": 26661,
+            "clicks": 801,
+            "conversions": 86,
+            "cpa": 688
           },
           "daily": [
             {
               "date": "2025-12-29",
               "dayOfWeek": "月",
-              "cost": 24568,
-              "impressions": 12073,
-              "clicks": 375,
-              "conversions": 109
+              "cost": 23525,
+              "impressions": 10361,
+              "clicks": 294,
+              "conversions": 27
             },
             {
               "date": "2025-12-30",
               "dayOfWeek": "火",
-              "cost": 23826,
-              "impressions": 12200,
-              "clicks": 381,
-              "conversions": 131
+              "cost": 22847,
+              "impressions": 10500,
+              "clicks": 285,
+              "conversions": 34
             },
             {
               "date": "2025-12-31",
               "dayOfWeek": "水",
-              "cost": 13823,
-              "impressions": 7637,
-              "clicks": 318,
-              "conversions": 120
+              "cost": 12866,
+              "impressions": 5800,
+              "clicks": 222,
+              "conversions": 25
             }
           ],
           "platforms": {
@@ -1004,13 +1004,13 @@
               "cpa": 1418
             },
             "meta": {
-              "cost": 36676,
-              "impressions": 30507,
-              "clicks": 828,
-              "conversions": 342,
-              "ctr": 2.71,
-              "cvr": 41.3,
-              "cpa": 107
+              "cost": 33697,
+              "impressions": 25258,
+              "clicks": 555,
+              "conversions": 68,
+              "ctr": 2.2,
+              "cvr": 12.25,
+              "cpa": 495
             }
           }
         }
@@ -1018,24 +1018,24 @@
     },
     "2026-01": {
       "summary": {
-        "cost": 749231,
-        "impressions": 277460,
-        "clicks": 14907,
-        "conversions": 4430,
-        "ctr": 5.37,
-        "cvr": 29.72,
-        "cpc": 50,
-        "cpa": 169
+        "cost": 718365,
+        "impressions": 225220,
+        "clicks": 11911,
+        "conversions": 1428,
+        "ctr": 5.29,
+        "cvr": 11.99,
+        "cpc": 60,
+        "cpa": 503
       },
       "previousMonthChange": {
-        "cost": 23.9,
-        "impressions": 8.1,
-        "clicks": 35.3,
-        "conversions": 18.2,
-        "ctr": 25.2,
-        "cvr": -12.6,
-        "cpc": -7.4,
-        "cpa": 5.0
+        "cost": 25.2,
+        "impressions": 4.6,
+        "clicks": 43.1,
+        "conversions": 40.3,
+        "ctr": 37.0,
+        "cvr": -2.0,
+        "cpc": -11.8,
+        "cpa": -10.7
       },
       "platforms": {
         "google": {
@@ -1075,14 +1075,14 @@
           ]
         },
         "meta": {
-          "cost": 324144,
-          "impressions": 256479,
-          "clicks": 10668,
-          "conversions": 3927,
-          "ctr": 4.16,
-          "cvr": 36.81,
-          "cpa": 82,
-          "cpaChange": -18.0,
+          "cost": 293278,
+          "impressions": 204239,
+          "clicks": 7672,
+          "conversions": 925,
+          "ctr": 3.76,
+          "cvr": 12.06,
+          "cpa": 317,
+          "cpaChange": -27.1,
           "campaigns": [
             {
               "name": "18-55_大阪_男_508",
@@ -1090,7 +1090,49 @@
               "impressions": 13955,
               "clicks": 674,
               "conversions": 38,
-              "cpa": 465
+              "cpa": 465,
+              "ads": [
+                {
+                  "name": "18-55_大阪_男_508",
+                  "cost": 8768,
+                  "impressions": 7645,
+                  "clicks": 512,
+                  "conversions": 30,
+                  "cpa": 292
+                },
+                {
+                  "name": "テストA ― 18-55_大阪_男_508",
+                  "cost": 2280,
+                  "impressions": 1637,
+                  "clicks": 32,
+                  "conversions": 3,
+                  "cpa": 760
+                },
+                {
+                  "name": "テストB ― 18-55_大阪_男_508",
+                  "cost": 2176,
+                  "impressions": 1412,
+                  "clicks": 57,
+                  "conversions": 3,
+                  "cpa": 725
+                },
+                {
+                  "name": "テストC ― 18-55_大阪_男_508",
+                  "cost": 2270,
+                  "impressions": 1691,
+                  "clicks": 41,
+                  "conversions": 1,
+                  "cpa": 2270
+                },
+                {
+                  "name": "テストD ― 18-55_大阪_男_508",
+                  "cost": 2186,
+                  "impressions": 1570,
+                  "clicks": 32,
+                  "conversions": 1,
+                  "cpa": 2186
+                }
+              ]
             },
             {
               "name": "411_関東_1865_カルーセル_新LP",
@@ -1107,84 +1149,84 @@
               "clicks": 4106,
               "conversions": 461,
               "cpa": 402
-            },
-            {
-              "name": "トラフィック",
-              "cost": 30866,
-              "impressions": 52240,
-              "clicks": 2996,
-              "conversions": 3002,
-              "cpa": 10
             }
-          ]
+          ],
+          "traffic": {
+            "name": "トラフィック",
+            "cost": 30866,
+            "impressions": 52240,
+            "clicks": 2996,
+            "results": 3002,
+            "resultType": "Instagramプロフィールへのアクセス"
+          }
         }
       },
       "weeks": {
         "week1": {
           "dates": "2026-01-01 ~ 2026-01-07",
           "summary": {
-            "cost": 144551,
-            "impressions": 62474,
-            "clicks": 2977,
-            "conversions": 1041,
-            "cpa": 138
+            "cost": 137504,
+            "impressions": 47380,
+            "clicks": 2203,
+            "conversions": 273,
+            "cpa": 503
           },
           "daily": [
             {
               "date": "2026-01-01",
               "dayOfWeek": "木",
-              "cost": 14202,
-              "impressions": 9253,
-              "clicks": 348,
-              "conversions": 148
+              "cost": 13236,
+              "impressions": 6869,
+              "clicks": 224,
+              "conversions": 30
             },
             {
               "date": "2026-01-02",
               "dayOfWeek": "金",
-              "cost": 16601,
-              "impressions": 9018,
-              "clicks": 407,
-              "conversions": 148
+              "cost": 15652,
+              "impressions": 6775,
+              "clicks": 297,
+              "conversions": 35
             },
             {
               "date": "2026-01-03",
               "dayOfWeek": "土",
-              "cost": 15662,
-              "impressions": 8354,
-              "clicks": 402,
-              "conversions": 154
+              "cost": 14705,
+              "impressions": 6248,
+              "clicks": 287,
+              "conversions": 41
             },
             {
               "date": "2026-01-04",
               "dayOfWeek": "日",
-              "cost": 19127,
-              "impressions": 10345,
-              "clicks": 454,
-              "conversions": 177
+              "cost": 17971,
+              "impressions": 7736,
+              "clicks": 316,
+              "conversions": 46
             },
             {
               "date": "2026-01-05",
               "dayOfWeek": "月",
-              "cost": 25067,
-              "impressions": 8997,
-              "clicks": 466,
-              "conversions": 142
+              "cost": 24060,
+              "impressions": 6980,
+              "clicks": 363,
+              "conversions": 37
             },
             {
               "date": "2026-01-06",
               "dayOfWeek": "火",
-              "cost": 26628,
-              "impressions": 8377,
-              "clicks": 453,
-              "conversions": 150
+              "cost": 25578,
+              "impressions": 6418,
+              "clicks": 353,
+              "conversions": 47
             },
             {
               "date": "2026-01-07",
               "dayOfWeek": "水",
-              "cost": 27264,
-              "impressions": 8130,
-              "clicks": 447,
-              "conversions": 122
+              "cost": 26302,
+              "impressions": 6354,
+              "clicks": 363,
+              "conversions": 37
             }
           ],
           "platforms": {
@@ -1198,81 +1240,81 @@
               "cpa": 878
             },
             "meta": {
-              "cost": 63716,
-              "impressions": 58297,
-              "clicks": 2232,
-              "conversions": 949,
-              "ctr": 3.83,
-              "cvr": 42.52,
-              "cpa": 67
+              "cost": 56669,
+              "impressions": 43203,
+              "clicks": 1458,
+              "conversions": 181,
+              "ctr": 3.37,
+              "cvr": 12.41,
+              "cpa": 313
             }
           }
         },
         "week2": {
           "dates": "2026-01-08 ~ 2026-01-14",
           "summary": {
-            "cost": 154610,
-            "impressions": 49885,
-            "clicks": 2817,
-            "conversions": 935,
-            "cpa": 165
+            "cost": 147647,
+            "impressions": 38394,
+            "clicks": 2160,
+            "conversions": 279,
+            "cpa": 529
           },
           "daily": [
             {
               "date": "2026-01-08",
               "dayOfWeek": "木",
-              "cost": 24991,
-              "impressions": 6851,
-              "clicks": 419,
-              "conversions": 127
+              "cost": 24033,
+              "impressions": 5233,
+              "clicks": 320,
+              "conversions": 30
             },
             {
               "date": "2026-01-09",
               "dayOfWeek": "金",
-              "cost": 20079,
-              "impressions": 6622,
-              "clicks": 380,
-              "conversions": 130
+              "cost": 19145,
+              "impressions": 5138,
+              "clicks": 287,
+              "conversions": 35
             },
             {
               "date": "2026-01-10",
               "dayOfWeek": "土",
-              "cost": 21545,
-              "impressions": 6982,
-              "clicks": 392,
-              "conversions": 117
+              "cost": 20612,
+              "impressions": 5520,
+              "clicks": 315,
+              "conversions": 39
             },
             {
               "date": "2026-01-11",
               "dayOfWeek": "日",
-              "cost": 21411,
-              "impressions": 7630,
-              "clicks": 383,
-              "conversions": 122
+              "cost": 20322,
+              "impressions": 5913,
+              "clicks": 293,
+              "conversions": 33
             },
             {
               "date": "2026-01-12",
               "dayOfWeek": "月",
-              "cost": 21327,
-              "impressions": 7842,
-              "clicks": 462,
-              "conversions": 166
+              "cost": 20260,
+              "impressions": 6027,
+              "clicks": 340,
+              "conversions": 43
             },
             {
               "date": "2026-01-13",
               "dayOfWeek": "火",
-              "cost": 21612,
-              "impressions": 7239,
-              "clicks": 401,
-              "conversions": 138
+              "cost": 20581,
+              "impressions": 5489,
+              "clicks": 308,
+              "conversions": 48
             },
             {
               "date": "2026-01-14",
               "dayOfWeek": "水",
-              "cost": 23645,
-              "impressions": 6719,
-              "clicks": 380,
-              "conversions": 135
+              "cost": 22694,
+              "impressions": 5074,
+              "clicks": 297,
+              "conversions": 51
             }
           ],
           "platforms": {
@@ -1286,81 +1328,81 @@
               "cpa": 1042
             },
             "meta": {
-              "cost": 62836,
-              "impressions": 45439,
-              "clicks": 1989,
-              "conversions": 847,
-              "ctr": 4.38,
-              "cvr": 42.58,
-              "cpa": 74
+              "cost": 55873,
+              "impressions": 33948,
+              "clicks": 1332,
+              "conversions": 191,
+              "ctr": 3.92,
+              "cvr": 14.34,
+              "cpa": 292
             }
           }
         },
         "week3": {
           "dates": "2026-01-15 ~ 2026-01-21",
           "summary": {
-            "cost": 145076,
-            "impressions": 50780,
-            "clicks": 2795,
-            "conversions": 925,
-            "cpa": 156
+            "cost": 138057,
+            "impressions": 39746,
+            "clicks": 2132,
+            "conversions": 258,
+            "cpa": 535
           },
           "daily": [
             {
               "date": "2026-01-15",
               "dayOfWeek": "木",
-              "cost": 21636,
-              "impressions": 6608,
-              "clicks": 399,
-              "conversions": 127
+              "cost": 20665,
+              "impressions": 5076,
+              "clicks": 313,
+              "conversions": 40
             },
             {
               "date": "2026-01-16",
               "dayOfWeek": "金",
-              "cost": 17559,
-              "impressions": 6814,
-              "clicks": 343,
-              "conversions": 116
+              "cost": 16613,
+              "impressions": 5413,
+              "clicks": 266,
+              "conversions": 40
             },
             {
               "date": "2026-01-17",
               "dayOfWeek": "土",
-              "cost": 19571,
-              "impressions": 6960,
-              "clicks": 414,
-              "conversions": 139
+              "cost": 18627,
+              "impressions": 5417,
+              "clicks": 316,
+              "conversions": 40
             },
             {
               "date": "2026-01-18",
               "dayOfWeek": "日",
-              "cost": 21291,
-              "impressions": 7872,
-              "clicks": 406,
-              "conversions": 143
+              "cost": 20161,
+              "impressions": 6027,
+              "clicks": 312,
+              "conversions": 47
             },
             {
               "date": "2026-01-19",
               "dayOfWeek": "月",
-              "cost": 23547,
-              "impressions": 7833,
-              "clicks": 422,
-              "conversions": 139
+              "cost": 22497,
+              "impressions": 6240,
+              "clicks": 315,
+              "conversions": 31
             },
             {
               "date": "2026-01-20",
               "dayOfWeek": "火",
-              "cost": 20635,
-              "impressions": 7159,
-              "clicks": 419,
-              "conversions": 139
+              "cost": 19629,
+              "impressions": 5629,
+              "clicks": 307,
+              "conversions": 26
             },
             {
               "date": "2026-01-21",
               "dayOfWeek": "水",
-              "cost": 20837,
-              "impressions": 7534,
-              "clicks": 392,
-              "conversions": 122
+              "cost": 19865,
+              "impressions": 5944,
+              "clicks": 303,
+              "conversions": 34
             }
           ],
           "platforms": {
@@ -1374,81 +1416,81 @@
               "cpa": 885
             },
             "meta": {
-              "cost": 62729,
-              "impressions": 47260,
-              "clicks": 1977,
-              "conversions": 832,
-              "ctr": 4.18,
-              "cvr": 42.08,
-              "cpa": 75
+              "cost": 55710,
+              "impressions": 36226,
+              "clicks": 1314,
+              "conversions": 165,
+              "ctr": 3.63,
+              "cvr": 12.56,
+              "cpa": 337
             }
           }
         },
         "week4": {
           "dates": "2026-01-22 ~ 2026-01-28",
           "summary": {
-            "cost": 205714,
-            "impressions": 72315,
-            "clicks": 4056,
-            "conversions": 1078,
-            "cpa": 190
+            "cost": 198652,
+            "impressions": 61817,
+            "clicks": 3406,
+            "conversions": 422,
+            "cpa": 470
           },
           "daily": [
             {
               "date": "2026-01-22",
               "dayOfWeek": "木",
-              "cost": 26936,
-              "impressions": 9175,
-              "clicks": 478,
-              "conversions": 146
+              "cost": 26006,
+              "impressions": 7701,
+              "clicks": 392,
+              "conversions": 56
             },
             {
               "date": "2026-01-23",
               "dayOfWeek": "金",
-              "cost": 29061,
-              "impressions": 8853,
-              "clicks": 514,
-              "conversions": 146
+              "cost": 28086,
+              "impressions": 7393,
+              "clicks": 429,
+              "conversions": 58
             },
             {
               "date": "2026-01-24",
               "dayOfWeek": "土",
-              "cost": 27745,
-              "impressions": 9305,
-              "clicks": 459,
-              "conversions": 125
+              "cost": 26810,
+              "impressions": 7894,
+              "clicks": 385,
+              "conversions": 52
             },
             {
               "date": "2026-01-25",
               "dayOfWeek": "日",
-              "cost": 29264,
-              "impressions": 10925,
-              "clicks": 562,
-              "conversions": 156
+              "cost": 28120,
+              "impressions": 9211,
+              "clicks": 463,
+              "conversions": 55
             },
             {
               "date": "2026-01-26",
               "dayOfWeek": "月",
-              "cost": 29112,
-              "impressions": 11249,
-              "clicks": 605,
-              "conversions": 162
+              "cost": 28021,
+              "impressions": 9630,
+              "clicks": 502,
+              "conversions": 61
             },
             {
               "date": "2026-01-27",
               "dayOfWeek": "火",
-              "cost": 31649,
-              "impressions": 11008,
-              "clicks": 698,
-              "conversions": 168
+              "cost": 30617,
+              "impressions": 9589,
+              "clicks": 599,
+              "conversions": 70
             },
             {
               "date": "2026-01-28",
               "dayOfWeek": "水",
-              "cost": 31947,
-              "impressions": 11800,
-              "clicks": 740,
-              "conversions": 175
+              "cost": 30992,
+              "impressions": 10399,
+              "clicks": 636,
+              "conversions": 70
             }
           ],
           "platforms": {
@@ -1462,49 +1504,49 @@
               "cpa": 807
             },
             "meta": {
-              "cost": 84536,
-              "impressions": 66232,
-              "clicks": 2828,
-              "conversions": 928,
-              "ctr": 4.27,
-              "cvr": 32.81,
-              "cpa": 91
+              "cost": 77474,
+              "impressions": 55734,
+              "clicks": 2178,
+              "conversions": 272,
+              "ctr": 3.91,
+              "cvr": 12.49,
+              "cpa": 284
             }
           }
         },
         "week5": {
           "dates": "2026-01-29 ~ 2026-01-31",
           "summary": {
-            "cost": 99280,
-            "impressions": 42006,
-            "clicks": 2262,
-            "conversions": 451,
-            "cpa": 220
+            "cost": 96505,
+            "impressions": 37883,
+            "clicks": 2010,
+            "conversions": 196,
+            "cpa": 492
           },
           "daily": [
             {
               "date": "2026-01-29",
               "dayOfWeek": "木",
-              "cost": 29103,
-              "impressions": 12074,
-              "clicks": 724,
-              "conversions": 156
+              "cost": 28164,
+              "impressions": 10610,
+              "clicks": 634,
+              "conversions": 65
             },
             {
               "date": "2026-01-30",
               "dayOfWeek": "金",
-              "cost": 34853,
-              "impressions": 12830,
-              "clicks": 785,
-              "conversions": 163
+              "cost": 33914,
+              "impressions": 11519,
+              "clicks": 697,
+              "conversions": 77
             },
             {
               "date": "2026-01-31",
               "dayOfWeek": "土",
-              "cost": 35324,
-              "impressions": 17102,
-              "clicks": 753,
-              "conversions": 132
+              "cost": 34427,
+              "impressions": 15754,
+              "clicks": 679,
+              "conversions": 54
             }
           ],
           "platforms": {
@@ -1518,13 +1560,13 @@
               "cpa": 611
             },
             "meta": {
-              "cost": 50327,
-              "impressions": 39251,
-              "clicks": 1642,
-              "conversions": 371,
-              "ctr": 4.18,
-              "cvr": 22.59,
-              "cpa": 135
+              "cost": 47552,
+              "impressions": 35128,
+              "clicks": 1390,
+              "conversions": 116,
+              "ctr": 3.96,
+              "cvr": 8.35,
+              "cpa": 409
             }
           }
         }

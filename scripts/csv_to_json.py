@@ -72,6 +72,15 @@ DEFAULT_COLUMN_MAPS = {
             "Clicks (all)",
         ],
         "conversions": ["結果", "Results", "コンバージョン", "Conversions"],
+        "result_type": [
+            "結果タイプ",
+            "Result Type",
+        ],
+        "ad_name": [
+            "広告の名前",
+            "Ad Name",
+            "Ad name",
+        ],
     },
     "yahoo": {
         "date": ["日", "Day", "Date", "日付"],
@@ -225,6 +234,15 @@ def read_csv_file(filepath, platform, column_maps):
                 parse_number(row.get(resolved.get("conversions"), 0))
             ),
         }
+
+        # Meta用の追加フィールド（結果タイプ、広告名）
+        if resolved.get("result_type"):
+            record["result_type"] = (
+                row.get(resolved["result_type"], "").strip()
+            )
+        if resolved.get("ad_name"):
+            record["ad_name"] = row.get(resolved["ad_name"], "").strip()
+
         records.append(record)
 
     return records
@@ -298,11 +316,20 @@ def build_data_json(all_records, client_name, client_id, existing_data=None):
         month = int(month_key[5:7])
         month_start = datetime(year, month, 1)
 
-        # --- 月次集計 ---
-        month_cost = sum(r["cost"] for r in records)
-        month_imp = sum(r["impressions"] for r in records)
-        month_clicks = sum(r["clicks"] for r in records)
-        month_cv = sum(r["conversions"] for r in records)
+        # --- 月次集計（トラフィック広告を除外） ---
+        traffic_types = {
+            "Instagramプロフィールへのアクセス",
+            "Instagram profile visits",
+        }
+        conv_only = [
+            r
+            for r in records
+            if r.get("result_type", "") not in traffic_types
+        ]
+        month_cost = sum(r["cost"] for r in conv_only)
+        month_imp = sum(r["impressions"] for r in conv_only)
+        month_clicks = sum(r["clicks"] for r in conv_only)
+        month_cv = sum(r["conversions"] for r in conv_only)
 
         month_summary = {
             "cost": month_cost,
@@ -322,32 +349,83 @@ def build_data_json(all_records, client_name, client_id, existing_data=None):
 
         platforms = {}
         for pf, pf_records in platform_records.items():
-            pf_cost = sum(r["cost"] for r in pf_records)
-            pf_imp = sum(r["impressions"] for r in pf_records)
-            pf_clicks = sum(r["clicks"] for r in pf_records)
-            pf_cv = sum(r["conversions"] for r in pf_records)
+            # Meta: トラフィック広告を分離
+            is_meta = pf == "meta"
+            traffic_types = {
+                "Instagramプロフィールへのアクセス",
+                "Instagram profile visits",
+            }
 
-            # キャンペーン別
+            if is_meta:
+                conv_records = [
+                    r
+                    for r in pf_records
+                    if r.get("result_type", "") not in traffic_types
+                ]
+                traffic_records = [
+                    r
+                    for r in pf_records
+                    if r.get("result_type", "") in traffic_types
+                ]
+            else:
+                conv_records = pf_records
+                traffic_records = []
+
+            pf_cost = sum(r["cost"] for r in conv_records)
+            pf_imp = sum(r["impressions"] for r in conv_records)
+            pf_clicks = sum(r["clicks"] for r in conv_records)
+            pf_cv = sum(r["conversions"] for r in conv_records)
+
+            # キャンペーン（広告セット）別
             campaign_records = defaultdict(list)
-            for r in pf_records:
+            for r in conv_records:
                 campaign_records[r["campaign"]].append(r)
 
             campaigns = []
-            for camp_name, camp_records in sorted(campaign_records.items()):
-                c_cost = sum(r["cost"] for r in camp_records)
-                c_imp = sum(r["impressions"] for r in camp_records)
-                c_clicks = sum(r["clicks"] for r in camp_records)
-                c_cv = sum(r["conversions"] for r in camp_records)
-                campaigns.append(
-                    {
-                        "name": camp_name,
-                        "cost": c_cost,
-                        "impressions": c_imp,
-                        "clicks": c_clicks,
-                        "conversions": c_cv,
-                        "cpa": int(safe_div(c_cost, c_cv)),
-                    }
-                )
+            for camp_name, camp_recs in sorted(campaign_records.items()):
+                c_cost = sum(r["cost"] for r in camp_recs)
+                c_imp = sum(r["impressions"] for r in camp_recs)
+                c_clicks = sum(r["clicks"] for r in camp_recs)
+                c_cv = sum(r["conversions"] for r in camp_recs)
+
+                camp_data = {
+                    "name": camp_name,
+                    "cost": c_cost,
+                    "impressions": c_imp,
+                    "clicks": c_clicks,
+                    "conversions": c_cv,
+                    "cpa": int(safe_div(c_cost, c_cv)),
+                }
+
+                # Meta: 広告別の内訳を追加
+                if is_meta:
+                    ad_records = defaultdict(list)
+                    for r in camp_recs:
+                        ad_key = r.get("ad_name", camp_name)
+                        ad_records[ad_key].append(r)
+
+                    ads = []
+                    for ad_name, ad_recs in sorted(ad_records.items()):
+                        a_cost = sum(r["cost"] for r in ad_recs)
+                        a_imp = sum(r["impressions"] for r in ad_recs)
+                        a_clicks = sum(r["clicks"] for r in ad_recs)
+                        a_cv = sum(r["conversions"] for r in ad_recs)
+                        ads.append(
+                            {
+                                "name": ad_name,
+                                "cost": a_cost,
+                                "impressions": a_imp,
+                                "clicks": a_clicks,
+                                "conversions": a_cv,
+                                "cpa": int(safe_div(a_cost, a_cv)),
+                            }
+                        )
+                    if len(ads) > 1 or (
+                        len(ads) == 1 and ads[0]["name"] != camp_name
+                    ):
+                        camp_data["ads"] = ads
+
+                campaigns.append(camp_data)
 
             pf_data = {
                 "cost": pf_cost,
@@ -360,6 +438,30 @@ def build_data_json(all_records, client_name, client_id, existing_data=None):
                 "cpaChange": 0,
                 "campaigns": campaigns,
             }
+
+            # Meta: トラフィック広告を別枠で追加
+            if is_meta and traffic_records:
+                t_cost = sum(r["cost"] for r in traffic_records)
+                t_imp = sum(r["impressions"] for r in traffic_records)
+                t_clicks = sum(r["clicks"] for r in traffic_records)
+                t_results = sum(r["conversions"] for r in traffic_records)
+                result_type = next(
+                    (
+                        r.get("result_type", "")
+                        for r in traffic_records
+                        if r.get("result_type")
+                    ),
+                    "",
+                )
+                pf_data["traffic"] = {
+                    "name": "トラフィック",
+                    "cost": t_cost,
+                    "impressions": t_imp,
+                    "clicks": t_clicks,
+                    "results": t_results,
+                    "resultType": result_type,
+                }
+
             platforms[pf] = pf_data
 
         # --- 週次集計 ---
@@ -373,12 +475,17 @@ def build_data_json(all_records, client_name, client_id, existing_data=None):
             w_records = week_groups[wn]
             w_start, w_end = get_week_dates(year, month, wn)
 
-            w_cost = sum(r["cost"] for r in w_records)
-            w_imp = sum(r["impressions"] for r in w_records)
-            w_clicks = sum(r["clicks"] for r in w_records)
-            w_cv = sum(r["conversions"] for r in w_records)
+            w_conv_only = [
+                r
+                for r in w_records
+                if r.get("result_type", "") not in traffic_types
+            ]
+            w_cost = sum(r["cost"] for r in w_conv_only)
+            w_imp = sum(r["impressions"] for r in w_conv_only)
+            w_clicks = sum(r["clicks"] for r in w_conv_only)
+            w_cv = sum(r["conversions"] for r in w_conv_only)
 
-            # 日別データ集計
+            # 日別データ集計（トラフィック除外）
             daily_map = defaultdict(
                 lambda: {
                     "cost": 0,
@@ -387,7 +494,7 @@ def build_data_json(all_records, client_name, client_id, existing_data=None):
                     "conversions": 0,
                 }
             )
-            for r in w_records:
+            for r in w_conv_only:
                 day_key = r["date"].strftime("%Y-%m-%d")
                 daily_map[day_key]["cost"] += r["cost"]
                 daily_map[day_key]["impressions"] += r["impressions"]
@@ -410,7 +517,7 @@ def build_data_json(all_records, client_name, client_id, existing_data=None):
                     }
                 )
 
-            # 週別の媒体別集計
+            # 週別の媒体別集計（トラフィック除外）
             week_platform_data = defaultdict(
                 lambda: {
                     "cost": 0,
@@ -419,7 +526,7 @@ def build_data_json(all_records, client_name, client_id, existing_data=None):
                     "conversions": 0,
                 }
             )
-            for r in w_records:
+            for r in w_conv_only:
                 wp = week_platform_data[r["platform"]]
                 wp["cost"] += r["cost"]
                 wp["impressions"] += r["impressions"]

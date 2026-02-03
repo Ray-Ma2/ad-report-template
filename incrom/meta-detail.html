@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>月別レポート</title>
+  <title>Meta分析</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
           <div class="header-logo">
             <div>
               <h1 class="header-title" id="client-name">読み込み中...</h1>
-              <p class="header-subtitle">広告パフォーマンスレポート</p>
+              <p class="header-subtitle">Meta 広告分析レポート</p>
             </div>
           </div>
           <div class="header-period" id="header-period"></div>
@@ -31,96 +31,60 @@
       <div class="container">
         <ul class="breadcrumb-list">
           <li class="breadcrumb-item"><a href="index.html">サマリー</a></li>
-          <li class="breadcrumb-item active" id="breadcrumb-month"></li>
+          <li class="breadcrumb-item"><a href="#" id="breadcrumb-month"></a></li>
+          <li class="breadcrumb-item active">Meta分析</li>
         </ul>
       </div>
     </nav>
 
     <main class="main-content">
       <div class="container">
-        <!-- KPI -->
+        <!-- コンバージョン広告 KPI -->
         <section class="section">
           <div class="section-header">
-            <h2 class="section-title">月間サマリー</h2>
+            <h2 class="section-title">Meta コンバージョン広告</h2>
+            <span class="section-subtitle">トラフィック広告を除く</span>
           </div>
-          <div class="kpi-grid" id="month-kpi"></div>
+          <div class="kpi-grid" id="meta-kpi"></div>
         </section>
 
-        <!-- 週次推移グラフ -->
-        <section class="section">
-          <div class="chart-container">
-            <div class="chart-header">
-              <h3 class="chart-title">週次推移</h3>
-              <div class="chart-legend">
-                <div class="chart-legend-item">
-                  <span class="chart-legend-color" style="background:#3b82f6;"></span><span>広告費用</span>
-                </div>
-                <div class="chart-legend-item">
-                  <span class="chart-legend-color" style="background:#10b981;"></span><span>CV数</span>
-                </div>
-              </div>
-            </div>
-            <div class="chart-canvas-wrapper"><canvas id="weekly-chart"></canvas></div>
-          </div>
-        </section>
-
-        <!-- 媒体別テーブル -->
+        <!-- 広告セット別テーブル -->
         <section class="section">
           <div class="section-header">
-            <h2 class="section-title">媒体別パフォーマンス</h2>
+            <h2 class="section-title">広告セット別パフォーマンス</h2>
           </div>
           <div class="table-wrapper">
             <div class="table-scroll">
               <table class="data-table">
                 <thead>
                   <tr>
-                    <th>媒体</th><th class="num">費用</th><th class="num">表示回数</th>
+                    <th>広告セット</th><th class="num">費用</th><th class="num">表示回数</th>
                     <th class="num">クリック</th><th class="num">CTR</th>
-                    <th class="num">CV</th><th class="num">CVR</th>
-                    <th class="num">CPA</th><th class="num">前月比CPA</th>
+                    <th class="num">CV</th><th class="num">CVR</th><th class="num">CPA</th>
                   </tr>
                 </thead>
-                <tbody id="platform-detail-body"></tbody>
+                <tbody id="adset-table-body"></tbody>
               </table>
             </div>
           </div>
         </section>
 
-        <!-- キャンペーン別テーブル -->
-        <section class="section">
+        <!-- 広告別テーブル -->
+        <section class="section" id="ad-detail-section">
           <div class="section-header">
-            <h2 class="section-title">キャンペーン別パフォーマンス</h2>
+            <h2 class="section-title">広告別パフォーマンス</h2>
+            <span class="section-subtitle">広告セットごとの内訳</span>
           </div>
-          <div class="table-wrapper">
-            <div class="table-scroll">
-              <table class="data-table">
-                <thead>
-                  <tr>
-                    <th>キャンペーン</th><th>媒体</th>
-                    <th class="num">費用</th><th class="num">表示</th>
-                    <th class="num">クリック</th><th class="num">CV</th><th class="num">CPA</th>
-                  </tr>
-                </thead>
-                <tbody id="campaign-table-body"></tbody>
-              </table>
-            </div>
-          </div>
+          <div id="ad-detail-container"></div>
         </section>
 
-        <!-- 週別リンク -->
-        <section class="section">
+        <!-- トラフィック広告 -->
+        <section class="section" id="traffic-section">
           <div class="section-header">
-            <h2 class="section-title">週別レポート</h2>
+            <h2 class="section-title">トラフィック広告</h2>
+            <span class="section-subtitle" id="traffic-result-type"></span>
           </div>
-          <div class="link-grid" id="week-links"></div>
-        </section>
-
-        <!-- 媒体別分析リンク -->
-        <section class="section">
-          <div class="section-header">
-            <h2 class="section-title">媒体別分析</h2>
-          </div>
-          <div class="link-grid" id="platform-analysis-links"></div>
+          <div class="kpi-grid" id="traffic-kpi"></div>
         </section>
 
         <!-- 前後月ナビ -->
@@ -136,7 +100,7 @@
         <div class="footer-inner"><p>&copy; 2026 広告レポートテンプレート</p></div>
       </div>
     </footer>
-    <button class="print-btn no-print" onclick="window.print()">🖨️ 印刷</button>
+    <button class="print-btn no-print" onclick="window.print()">印刷</button>
   </div>
 
   <script src="../template/js/charts.js"></script>
@@ -147,8 +111,8 @@
       loadData('data.json').then(function(data) {
         if (!data) return;
         var month = params.month || Object.keys(data.months).sort()[0];
-        document.title = month + ' レポート';
-        renderMonthlyPage(data, month);
+        document.title = month + ' Meta分析';
+        renderMetaDetailPage(data, month);
         initTableSort();
       });
     });

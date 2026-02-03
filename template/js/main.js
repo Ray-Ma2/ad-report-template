@@ -417,6 +417,20 @@ function renderMonthlyPage(data, monthKey) {
     weekLinksEl.innerHTML = whtml;
   }
 
+  // 媒体別分析リンク
+  var platformLinksEl = document.getElementById('platform-analysis-links');
+  if (platformLinksEl) {
+    var pLinksHtml = '';
+    var platforms = monthData.platforms || {};
+    if (platforms.meta) {
+      pLinksHtml += '<a href="meta-detail.html?month=' + monthKey + '" class="link-card">' +
+        '<span class="link-card-icon">📱</span>' +
+        '<span class="link-card-label">Meta分析</span>' +
+        '<span class="text-sm text-gray">広告セット・広告別</span></a>';
+    }
+    platformLinksEl.innerHTML = pLinksHtml;
+  }
+
   // 前後月ナビゲーション
   var allMonths = Object.keys(data.months).sort();
   var idx = allMonths.indexOf(monthKey);
@@ -595,6 +609,170 @@ function renderWeeklyPage(data, monthKey, weekKey) {
     if (weekIndex < weekKeys.length - 1) {
       nextLink.href = 'weekly.html?month=' + monthKey + '&week=' + weekKeys[weekIndex + 1];
       nextLink.textContent = '次の週 →';
+      nextLink.classList.remove('disabled');
+    } else {
+      nextLink.classList.add('disabled');
+    }
+  }
+}
+
+// =====================================================
+// Meta分析ページ（meta-detail.html）のレンダリング
+// =====================================================
+
+function renderMetaDetailPage(data, monthKey) {
+  var monthData = data.months[monthKey];
+  if (!monthData) {
+    document.querySelector('.main-content .container').innerHTML =
+      '<p>指定された月のデータが見つかりません。</p>';
+    return;
+  }
+
+  var meta = monthData.platforms.meta;
+  if (!meta) {
+    document.querySelector('.main-content .container').innerHTML =
+      '<p>Meta広告のデータが見つかりません。</p>';
+    return;
+  }
+
+  // ヘッダー
+  document.getElementById('client-name').textContent = data.client.name;
+  document.getElementById('header-period').textContent = formatMonthLabel(monthKey);
+  var bcMonth = document.getElementById('breadcrumb-month');
+  if (bcMonth) {
+    bcMonth.textContent = formatMonthLabel(monthKey);
+    bcMonth.href = 'monthly.html?month=' + monthKey;
+  }
+
+  // --- コンバージョン広告 KPI ---
+  var kpiEl = document.getElementById('meta-kpi');
+  if (kpiEl) {
+    var ctr = calcCTR(meta.clicks, meta.impressions);
+    var cvr = calcCVR(meta.conversions, meta.clicks);
+    var cpc = calcCPC(meta.cost, meta.clicks);
+    var cpa = calcCPA(meta.cost, meta.conversions);
+    kpiEl.innerHTML =
+      buildKPICard('広告費用', formatCurrency(meta.cost), null) +
+      buildKPICard('表示回数', formatNumber(meta.impressions), null) +
+      buildKPICard('クリック数', formatNumber(meta.clicks), null) +
+      buildKPICard('CV', formatNumber(meta.conversions), null) +
+      buildKPICard('CTR', formatPercent(ctr), null) +
+      buildKPICard('CVR', formatPercent(cvr), null) +
+      buildKPICard('CPC', formatCurrency(cpc), null) +
+      buildKPICard('CPA', formatCurrency(cpa), null);
+  }
+
+  // --- 広告セット別テーブル ---
+  var adsetBody = document.getElementById('adset-table-body');
+  if (adsetBody) {
+    var html = '';
+    var campaigns = meta.campaigns || [];
+    campaigns.forEach(function(c) {
+      var cCtr = calcCTR(c.clicks, c.impressions);
+      var cCvr = calcCVR(c.conversions, c.clicks);
+      var cCpa = calcCPA(c.cost, c.conversions);
+      html += '<tr>' +
+        '<td>' + c.name + '</td>' +
+        '<td class="num">' + formatCurrency(c.cost) + '</td>' +
+        '<td class="num">' + formatNumber(c.impressions) + '</td>' +
+        '<td class="num">' + formatNumber(c.clicks) + '</td>' +
+        '<td class="num">' + formatPercent(cCtr) + '</td>' +
+        '<td class="num">' + formatNumber(c.conversions) + '</td>' +
+        '<td class="num">' + formatPercent(cCvr) + '</td>' +
+        '<td class="num">' + formatCurrency(cCpa) + '</td>' +
+        '</tr>';
+    });
+    // 合計行
+    html += '<tr style="font-weight:600;background:var(--gray-50);">' +
+      '<td>合計</td>' +
+      '<td class="num">' + formatCurrency(meta.cost) + '</td>' +
+      '<td class="num">' + formatNumber(meta.impressions) + '</td>' +
+      '<td class="num">' + formatNumber(meta.clicks) + '</td>' +
+      '<td class="num">' + formatPercent(calcCTR(meta.clicks, meta.impressions)) + '</td>' +
+      '<td class="num">' + formatNumber(meta.conversions) + '</td>' +
+      '<td class="num">' + formatPercent(calcCVR(meta.conversions, meta.clicks)) + '</td>' +
+      '<td class="num">' + formatCurrency(calcCPA(meta.cost, meta.conversions)) + '</td>' +
+      '</tr>';
+    adsetBody.innerHTML = html;
+  }
+
+  // --- 広告別テーブル（広告セットごとにグルーピング） ---
+  var adContainer = document.getElementById('ad-detail-container');
+  var hasAds = false;
+  if (adContainer) {
+    var adHtml = '';
+    campaigns.forEach(function(c) {
+      var ads = c.ads;
+      if (!ads || ads.length === 0) return;
+      hasAds = true;
+      adHtml += '<div class="table-wrapper" style="margin-bottom:1.5rem;">' +
+        '<h4 style="margin:0 0 0.5rem;font-size:0.95rem;color:var(--gray-700);">' + c.name + '</h4>' +
+        '<div class="table-scroll"><table class="data-table"><thead><tr>' +
+        '<th>広告</th><th class="num">費用</th><th class="num">表示回数</th>' +
+        '<th class="num">クリック</th><th class="num">CTR</th>' +
+        '<th class="num">CV</th><th class="num">CVR</th><th class="num">CPA</th>' +
+        '</tr></thead><tbody>';
+      ads.forEach(function(ad) {
+        var aCtr = calcCTR(ad.clicks, ad.impressions);
+        var aCvr = calcCVR(ad.conversions, ad.clicks);
+        var aCpa = calcCPA(ad.cost, ad.conversions);
+        adHtml += '<tr>' +
+          '<td>' + ad.name + '</td>' +
+          '<td class="num">' + formatCurrency(ad.cost) + '</td>' +
+          '<td class="num">' + formatNumber(ad.impressions) + '</td>' +
+          '<td class="num">' + formatNumber(ad.clicks) + '</td>' +
+          '<td class="num">' + formatPercent(aCtr) + '</td>' +
+          '<td class="num">' + formatNumber(ad.conversions) + '</td>' +
+          '<td class="num">' + formatPercent(aCvr) + '</td>' +
+          '<td class="num">' + formatCurrency(aCpa) + '</td>' +
+          '</tr>';
+      });
+      adHtml += '</tbody></table></div></div>';
+    });
+    adContainer.innerHTML = adHtml;
+  }
+  if (!hasAds) {
+    var adSection = document.getElementById('ad-detail-section');
+    if (adSection) adSection.style.display = 'none';
+  }
+
+  // --- トラフィック広告 ---
+  var traffic = meta.traffic;
+  var trafficSection = document.getElementById('traffic-section');
+  if (traffic && trafficSection) {
+    var rtEl = document.getElementById('traffic-result-type');
+    if (rtEl) rtEl.textContent = traffic.resultType || '';
+
+    var trafficKpi = document.getElementById('traffic-kpi');
+    if (trafficKpi) {
+      trafficKpi.innerHTML =
+        buildKPICard('広告費用', formatCurrency(traffic.cost), null) +
+        buildKPICard('表示回数', formatNumber(traffic.impressions), null) +
+        buildKPICard('クリック数', formatNumber(traffic.clicks), null) +
+        buildKPICard('結果', formatNumber(traffic.results), null);
+    }
+  } else if (trafficSection) {
+    trafficSection.style.display = 'none';
+  }
+
+  // --- 前後月ナビゲーション ---
+  var allMonths = Object.keys(data.months).sort();
+  var idx = allMonths.indexOf(monthKey);
+  var prevLink = document.getElementById('prev-month');
+  var nextLink = document.getElementById('next-month');
+  if (prevLink) {
+    if (idx > 0) {
+      prevLink.href = 'meta-detail.html?month=' + allMonths[idx - 1];
+      prevLink.textContent = '← ' + formatMonthLabel(allMonths[idx - 1]);
+      prevLink.classList.remove('disabled');
+    } else {
+      prevLink.classList.add('disabled');
+    }
+  }
+  if (nextLink) {
+    if (idx < allMonths.length - 1) {
+      nextLink.href = 'meta-detail.html?month=' + allMonths[idx + 1];
+      nextLink.textContent = formatMonthLabel(allMonths[idx + 1]) + ' →';
       nextLink.classList.remove('disabled');
     } else {
       nextLink.classList.add('disabled');
