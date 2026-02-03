@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026年1月 Week3 - サンプルクライアント</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../template/css/style.css">
+  <link rel="stylesheet" href="../../template/css/print.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-logo">
+            <div>
+              <h1 class="header-title">サンプルクライアント</h1>
+              <p class="header-subtitle">広告パフォーマンスレポート</p>
+            </div>
+          </div>
+          <div class="header-period">2026年1月 Week 3</div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="breadcrumb">
+      <div class="container">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="../index.html">サマリー</a></li>
+          <li class="breadcrumb-item"><a href="index.html">2026年1月</a></li>
+          <li class="breadcrumb-item active">Week 3 (1/15 - 1/21)</li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <div class="container">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title">週間サマリー</h2>
+            <span class="section-subtitle">2026年1月15日〜21日</span>
+          </div>
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-label">広告費用</div>
+              <div class="kpi-value">¥130,000</div>
+              <div class="kpi-change positive">
+                <span class="kpi-change-icon">↑</span>
+                <span>前週比 +4.0%</span>
+              </div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">表示回数</div>
+              <div class="kpi-value">400,000</div>
+              <div class="kpi-change positive">
+                <span class="kpi-change-icon">↑</span>
+                <span>前週比 +5.3%</span>
+              </div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">クリック数</div>
+              <div class="kpi-value">4,000</div>
+              <div class="kpi-change positive">
+                <span class="kpi-change-icon">↑</span>
+                <span>前週比 +5.3%</span>
+              </div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">CV</div>
+              <div class="kpi-value">14</div>
+              <div class="kpi-change positive">
+                <span class="kpi-change-icon">↑</span>
+                <span>前週比 +7.7%</span>
+              </div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">CTR</div>
+              <div class="kpi-value">1.00%</div>
+              <div class="kpi-change neutral"><span>±0.0%</span></div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">CVR</div>
+              <div class="kpi-value">0.35%</div>
+              <div class="kpi-change positive">
+                <span class="kpi-change-icon">↑</span>
+                <span>+2.9%</span>
+              </div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">CPC</div>
+              <div class="kpi-value">¥33</div>
+              <div class="kpi-change neutral"><span>±0.0%</span></div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">CPA</div>
+              <div class="kpi-value">¥9,286</div>
+              <div class="kpi-change positive">
+                <span class="kpi-change-icon">↓</span>
+                <span>-3.4%</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="chart-container">
+            <div class="chart-header">
+              <h3 class="chart-title">日別推移</h3>
+            </div>
+            <div class="chart-canvas-wrapper">
+              <canvas id="daily-chart"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title">日別パフォーマンス</h2>
+          </div>
+          <div class="table-wrapper">
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>日付</th>
+                    <th class="num">費用</th>
+                    <th class="num">表示回数</th>
+                    <th class="num">クリック</th>
+                    <th class="num">CV</th>
+                    <th class="num">CPA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>1/15 (水)</td><td class="num">¥18,000</td><td class="num">56,000</td><td class="num">560</td><td class="num">2</td><td class="num">¥9,000</td></tr>
+                  <tr><td>1/16 (木)</td><td class="num">¥19,000</td><td class="num">58,000</td><td class="num">580</td><td class="num">2</td><td class="num">¥9,500</td></tr>
+                  <tr><td>1/17 (金)</td><td class="num">¥20,000</td><td class="num">60,000</td><td class="num">600</td><td class="num">2</td><td class="num">¥10,000</td></tr>
+                  <tr><td>1/18 (土)</td><td class="num">¥21,000</td><td class="num">64,000</td><td class="num">640</td><td class="num">3</td><td class="num">¥7,000</td></tr>
+                  <tr><td>1/19 (日)</td><td class="num">¥19,000</td><td class="num">58,000</td><td class="num">580</td><td class="num">2</td><td class="num">¥9,500</td></tr>
+                  <tr><td>1/20 (月)</td><td class="num">¥17,000</td><td class="num">52,000</td><td class="num">520</td><td class="num">2</td><td class="num">¥8,500</td></tr>
+                  <tr><td>1/21 (火)</td><td class="num">¥16,000</td><td class="num">52,000</td><td class="num">520</td><td class="num">1</td><td class="num">¥16,000</td></tr>
+                </tbody>
+                <tfoot>
+                  <tr style="font-weight: 600; background: var(--gray-50);">
+                    <td>合計</td><td class="num">¥130,000</td><td class="num">400,000</td><td class="num">4,000</td><td class="num">14</td><td class="num">¥9,286</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <nav class="page-nav no-print">
+          <a href="week2.html" class="page-nav-link">← 前の週</a>
+          <a href="week4.html" class="page-nav-link">次の週 →</a>
+        </nav>
+      </div>
+    </main>
+
+    <footer class="footer no-print">
+      <div class="container">
+        <div class="footer-inner">
+          <p>&copy; 2026 広告レポートテンプレート</p>
+        </div>
+      </div>
+    </footer>
+
+    <button class="print-btn no-print" onclick="window.print()">🖨️ 印刷</button>
+  </div>
+
+  <script src="../../template/js/charts.js"></script>
+  <script src="../../template/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      initDailyChart('daily-chart', {
+        labels: ['1/15', '1/16', '1/17', '1/18', '1/19', '1/20', '1/21'],
+        costData: [18000, 19000, 20000, 21000, 19000, 17000, 16000],
+        clickData: [560, 580, 600, 640, 580, 520, 520]
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,403 @@
+{
+  "client": {
+    "name": "サンプルクライアント",
+    "id": "sample-client"
+  },
+  "months": {
+    "2026-01": {
+      "summary": {
+        "cost": 500000,
+        "impressions": 1500000,
+        "clicks": 15000,
+        "conversions": 50,
+        "ctr": 1.00,
+        "cvr": 0.33,
+        "cpc": 33,
+        "cpa": 10000
+      },
+      "previousMonthChange": {
+        "cost": 4.2,
+        "impressions": 8.5,
+        "clicks": 6.3,
+        "conversions": -3.8,
+        "ctr": 0.0,
+        "cvr": -9.5,
+        "cpc": -2.0,
+        "cpa": 8.3
+      },
+      "platforms": {
+        "google": {
+          "cost": 200000,
+          "impressions": 800000,
+          "clicks": 8000,
+          "conversions": 23,
+          "ctr": 1.00,
+          "cvr": 0.29,
+          "cpa": 8696,
+          "cpaChange": -5.2,
+          "campaigns": [
+            {
+              "name": "ブランド検索",
+              "cost": 80000,
+              "impressions": 200000,
+              "clicks": 4000,
+              "conversions": 12,
+              "cpa": 6667
+            },
+            {
+              "name": "一般検索",
+              "cost": 70000,
+              "impressions": 350000,
+              "clicks": 2500,
+              "conversions": 7,
+              "cpa": 10000
+            },
+            {
+              "name": "ディスプレイ",
+              "cost": 50000,
+              "impressions": 250000,
+              "clicks": 1500,
+              "conversions": 4,
+              "cpa": 12500
+            }
+          ]
+        },
+        "meta": {
+          "cost": 150000,
+          "impressions": 450000,
+          "clicks": 4500,
+          "conversions": 16,
+          "ctr": 1.00,
+          "cvr": 0.36,
+          "cpa": 9375,
+          "cpaChange": 3.1,
+          "campaigns": [
+            {
+              "name": "リターゲティング",
+              "cost": 60000,
+              "impressions": 150000,
+              "clicks": 2000,
+              "conversions": 9,
+              "cpa": 6667
+            },
+            {
+              "name": "興味関心",
+              "cost": 90000,
+              "impressions": 300000,
+              "clicks": 2500,
+              "conversions": 7,
+              "cpa": 12857
+            }
+          ]
+        },
+        "yahoo": {
+          "cost": 100000,
+          "impressions": 180000,
+          "clicks": 1800,
+          "conversions": 7,
+          "ctr": 1.00,
+          "cvr": 0.39,
+          "cpa": 14286,
+          "cpaChange": 8.7,
+          "campaigns": [
+            {
+              "name": "検索広告",
+              "cost": 60000,
+              "impressions": 100000,
+              "clicks": 1000,
+              "conversions": 4,
+              "cpa": 15000
+            },
+            {
+              "name": "ディスプレイ",
+              "cost": 40000,
+              "impressions": 80000,
+              "clicks": 800,
+              "conversions": 3,
+              "cpa": 13333
+            }
+          ]
+        },
+        "line": {
+          "cost": 50000,
+          "impressions": 70000,
+          "clicks": 700,
+          "conversions": 4,
+          "ctr": 1.00,
+          "cvr": 0.57,
+          "cpa": 12500,
+          "cpaChange": -2.3,
+          "campaigns": [
+            {
+              "name": "認知拡大",
+              "cost": 50000,
+              "impressions": 70000,
+              "clicks": 700,
+              "conversions": 4,
+              "cpa": 12500
+            }
+          ]
+        }
+      },
+      "weeks": {
+        "week1": {
+          "dates": "2026-01-01 ~ 2026-01-07",
+          "summary": {
+            "cost": 110000,
+            "impressions": 320000,
+            "clicks": 3200,
+            "conversions": 10,
+            "cpa": 11000
+          },
+          "daily": [
+            { "date": "2026-01-01", "dayOfWeek": "水", "cost": 12000, "impressions": 35000, "clicks": 350, "conversions": 1 },
+            { "date": "2026-01-02", "dayOfWeek": "木", "cost": 14000, "impressions": 42000, "clicks": 420, "conversions": 1 },
+            { "date": "2026-01-03", "dayOfWeek": "金", "cost": 15000, "impressions": 45000, "clicks": 450, "conversions": 2 },
+            { "date": "2026-01-04", "dayOfWeek": "土", "cost": 18000, "impressions": 54000, "clicks": 540, "conversions": 2 },
+            { "date": "2026-01-05", "dayOfWeek": "日", "cost": 17000, "impressions": 51000, "clicks": 510, "conversions": 1 },
+            { "date": "2026-01-06", "dayOfWeek": "月", "cost": 16000, "impressions": 48000, "clicks": 480, "conversions": 2 },
+            { "date": "2026-01-07", "dayOfWeek": "火", "cost": 18000, "impressions": 45000, "clicks": 450, "conversions": 1 }
+          ]
+        },
+        "week2": {
+          "dates": "2026-01-08 ~ 2026-01-14",
+          "summary": {
+            "cost": 125000,
+            "impressions": 380000,
+            "clicks": 3800,
+            "conversions": 13,
+            "cpa": 9615
+          },
+          "daily": [
+            { "date": "2026-01-08", "dayOfWeek": "水", "cost": 17000, "impressions": 52000, "clicks": 520, "conversions": 2 },
+            { "date": "2026-01-09", "dayOfWeek": "木", "cost": 18000, "impressions": 55000, "clicks": 550, "conversions": 2 },
+            { "date": "2026-01-10", "dayOfWeek": "金", "cost": 19000, "impressions": 58000, "clicks": 580, "conversions": 2 },
+            { "date": "2026-01-11", "dayOfWeek": "土", "cost": 20000, "impressions": 60000, "clicks": 600, "conversions": 2 },
+            { "date": "2026-01-12", "dayOfWeek": "日", "cost": 18000, "impressions": 55000, "clicks": 550, "conversions": 2 },
+            { "date": "2026-01-13", "dayOfWeek": "月", "cost": 16000, "impressions": 50000, "clicks": 500, "conversions": 1 },
+            { "date": "2026-01-14", "dayOfWeek": "火", "cost": 17000, "impressions": 50000, "clicks": 500, "conversions": 2 }
+          ]
+        },
+        "week3": {
+          "dates": "2026-01-15 ~ 2026-01-21",
+          "summary": {
+            "cost": 130000,
+            "impressions": 400000,
+            "clicks": 4000,
+            "conversions": 14,
+            "cpa": 9286
+          },
+          "daily": [
+            { "date": "2026-01-15", "dayOfWeek": "水", "cost": 18000, "impressions": 56000, "clicks": 560, "conversions": 2 },
+            { "date": "2026-01-16", "dayOfWeek": "木", "cost": 19000, "impressions": 58000, "clicks": 580, "conversions": 2 },
+            { "date": "2026-01-17", "dayOfWeek": "金", "cost": 20000, "impressions": 60000, "clicks": 600, "conversions": 2 },
+            { "date": "2026-01-18", "dayOfWeek": "土", "cost": 21000, "impressions": 64000, "clicks": 640, "conversions": 3 },
+            { "date": "2026-01-19", "dayOfWeek": "日", "cost": 19000, "impressions": 58000, "clicks": 580, "conversions": 2 },
+            { "date": "2026-01-20", "dayOfWeek": "月", "cost": 17000, "impressions": 52000, "clicks": 520, "conversions": 2 },
+            { "date": "2026-01-21", "dayOfWeek": "火", "cost": 16000, "impressions": 52000, "clicks": 520, "conversions": 1 }
+          ]
+        },
+        "week4": {
+          "dates": "2026-01-22 ~ 2026-01-31",
+          "summary": {
+            "cost": 135000,
+            "impressions": 400000,
+            "clicks": 4000,
+            "conversions": 13,
+            "cpa": 10385
+          },
+          "daily": [
+            { "date": "2026-01-22", "dayOfWeek": "水", "cost": 14000, "impressions": 42000, "clicks": 420, "conversions": 1 },
+            { "date": "2026-01-23", "dayOfWeek": "木", "cost": 15000, "impressions": 45000, "clicks": 450, "conversions": 2 },
+            { "date": "2026-01-24", "dayOfWeek": "金", "cost": 16000, "impressions": 48000, "clicks": 480, "conversions": 1 },
+            { "date": "2026-01-25", "dayOfWeek": "土", "cost": 17000, "impressions": 50000, "clicks": 500, "conversions": 2 },
+            { "date": "2026-01-26", "dayOfWeek": "日", "cost": 15000, "impressions": 45000, "clicks": 450, "conversions": 1 },
+            { "date": "2026-01-27", "dayOfWeek": "月", "cost": 14000, "impressions": 42000, "clicks": 420, "conversions": 1 },
+            { "date": "2026-01-28", "dayOfWeek": "火", "cost": 13000, "impressions": 40000, "clicks": 400, "conversions": 2 },
+            { "date": "2026-01-29", "dayOfWeek": "水", "cost": 12000, "impressions": 36000, "clicks": 360, "conversions": 1 },
+            { "date": "2026-01-30", "dayOfWeek": "木", "cost": 10000, "impressions": 30000, "clicks": 300, "conversions": 1 },
+            { "date": "2026-01-31", "dayOfWeek": "金", "cost": 9000, "impressions": 22000, "clicks": 220, "conversions": 1 }
+          ]
+        }
+      }
+    },
+    "2026-02": {
+      "summary": {
+        "cost": 550000,
+        "impressions": 1750000,
+        "clicks": 17500,
+        "conversions": 58,
+        "ctr": 1.00,
+        "cvr": 0.33,
+        "cpc": 31,
+        "cpa": 9483
+      },
+      "previousMonthChange": {
+        "cost": 10.0,
+        "impressions": 16.7,
+        "clicks": 16.7,
+        "conversions": 16.0,
+        "ctr": 0.0,
+        "cvr": 0.0,
+        "cpc": -6.1,
+        "cpa": -5.2
+      },
+      "platforms": {
+        "google": {
+          "cost": 220000,
+          "impressions": 900000,
+          "clicks": 9000,
+          "conversions": 25,
+          "ctr": 1.00,
+          "cvr": 0.28,
+          "cpa": 8800,
+          "cpaChange": 1.2,
+          "campaigns": [
+            {
+              "name": "ブランド検索",
+              "cost": 90000,
+              "impressions": 250000,
+              "clicks": 4500,
+              "conversions": 14,
+              "cpa": 6429
+            },
+            {
+              "name": "一般検索",
+              "cost": 80000,
+              "impressions": 400000,
+              "clicks": 2800,
+              "conversions": 7,
+              "cpa": 11429
+            },
+            {
+              "name": "ディスプレイ",
+              "cost": 50000,
+              "impressions": 250000,
+              "clicks": 1700,
+              "conversions": 4,
+              "cpa": 12500
+            }
+          ]
+        },
+        "meta": {
+          "cost": 165000,
+          "impressions": 500000,
+          "clicks": 5000,
+          "conversions": 19,
+          "ctr": 1.00,
+          "cvr": 0.38,
+          "cpa": 8684,
+          "cpaChange": -7.4,
+          "campaigns": [
+            {
+              "name": "リターゲティング",
+              "cost": 70000,
+              "impressions": 175000,
+              "clicks": 2300,
+              "conversions": 11,
+              "cpa": 6364
+            },
+            {
+              "name": "興味関心",
+              "cost": 95000,
+              "impressions": 325000,
+              "clicks": 2700,
+              "conversions": 8,
+              "cpa": 11875
+            }
+          ]
+        },
+        "yahoo": {
+          "cost": 110000,
+          "impressions": 240000,
+          "clicks": 2400,
+          "conversions": 10,
+          "ctr": 1.00,
+          "cvr": 0.42,
+          "cpa": 11000,
+          "cpaChange": -23.0,
+          "campaigns": [
+            {
+              "name": "検索広告",
+              "cost": 70000,
+              "impressions": 150000,
+              "clicks": 1500,
+              "conversions": 7,
+              "cpa": 10000
+            },
+            {
+              "name": "ディスプレイ",
+              "cost": 40000,
+              "impressions": 90000,
+              "clicks": 900,
+              "conversions": 3,
+              "cpa": 13333
+            }
+          ]
+        },
+        "line": {
+          "cost": 55000,
+          "impressions": 110000,
+          "clicks": 1100,
+          "conversions": 4,
+          "ctr": 1.00,
+          "cvr": 0.36,
+          "cpa": 13750,
+          "cpaChange": 10.0,
+          "campaigns": [
+            {
+              "name": "認知拡大",
+              "cost": 55000,
+              "impressions": 110000,
+              "clicks": 1100,
+              "conversions": 4,
+              "cpa": 13750
+            }
+          ]
+        }
+      },
+      "weeks": {
+        "week1": {
+          "dates": "2026-02-01 ~ 2026-02-07",
+          "summary": {
+            "cost": 130000,
+            "impressions": 420000,
+            "clicks": 4200,
+            "conversions": 14,
+            "cpa": 9286
+          }
+        },
+        "week2": {
+          "dates": "2026-02-08 ~ 2026-02-14",
+          "summary": {
+            "cost": 140000,
+            "impressions": 450000,
+            "clicks": 4500,
+            "conversions": 15,
+            "cpa": 9333
+          }
+        },
+        "week3": {
+          "dates": "2026-02-15 ~ 2026-02-21",
+          "summary": {
+            "cost": 145000,
+            "impressions": 460000,
+            "clicks": 4600,
+            "conversions": 16,
+            "cpa": 9063
+          }
+        },
+        "week4": {
+          "dates": "2026-02-22 ~ 2026-02-28",
+          "summary": {
+            "cost": 135000,
+            "impressions": 420000,
+            "clicks": 4200,
+            "conversions": 13,
+            "cpa": 10385
+          }
+        }
+      }
+    }
+  }
+}

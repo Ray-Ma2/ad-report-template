@@ -1,0 +1,304 @@
+/* =====================================================
+   広告レポートテンプレート - 印刷用スタイルシート
+   ===================================================== */
+
+@media print {
+  /* -----------------------------------------------------
+     基本設定
+     ----------------------------------------------------- */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  html {
+    font-size: 10pt;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+
+  /* -----------------------------------------------------
+     非表示要素
+     ----------------------------------------------------- */
+  .no-print,
+  .print-btn,
+  .tab-nav,
+  .page-nav,
+  .footer,
+  nav:not(.breadcrumb) {
+    display: none !important;
+  }
+
+  /* パンくずリストは表示（現在位置の確認用） */
+  .breadcrumb {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8pt;
+    margin-bottom: 16pt;
+  }
+
+  /* -----------------------------------------------------
+     ヘッダー調整
+     ----------------------------------------------------- */
+  .header {
+    background: #1e3a8a !important;
+    color: white !important;
+    padding: 16pt;
+    margin-bottom: 16pt;
+  }
+
+  .header-title {
+    font-size: 16pt;
+  }
+
+  .header-period {
+    font-size: 11pt;
+    background: rgba(255, 255, 255, 0.2) !important;
+  }
+
+  /* -----------------------------------------------------
+     レイアウト調整
+     ----------------------------------------------------- */
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .main-content {
+    padding: 0;
+  }
+
+  .section {
+    margin-bottom: 16pt;
+  }
+
+  /* -----------------------------------------------------
+     KPIカード
+     ----------------------------------------------------- */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8pt;
+    margin-bottom: 16pt;
+  }
+
+  .kpi-card {
+    border: 1px solid #ddd;
+    padding: 8pt;
+    border-radius: 4pt;
+    box-shadow: none;
+  }
+
+  .kpi-label {
+    font-size: 8pt;
+    margin-bottom: 4pt;
+  }
+
+  .kpi-value {
+    font-size: 14pt;
+  }
+
+  .kpi-change {
+    font-size: 8pt;
+    padding: 2pt 4pt;
+  }
+
+  .kpi-change.positive {
+    background: #d1fae5 !important;
+    color: #065f46 !important;
+  }
+
+  .kpi-change.negative {
+    background: #fee2e2 !important;
+    color: #991b1b !important;
+  }
+
+  /* -----------------------------------------------------
+     テーブル
+     ----------------------------------------------------- */
+  .table-wrapper {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+
+  .data-table {
+    font-size: 9pt;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 6pt 8pt;
+    border: 1px solid #ddd;
+  }
+
+  .data-table th {
+    background: #f3f4f6 !important;
+    font-weight: bold;
+  }
+
+  .data-table tbody tr:hover {
+    background: transparent;
+  }
+
+  .data-table .positive {
+    color: #065f46 !important;
+  }
+
+  .data-table .negative {
+    color: #991b1b !important;
+  }
+
+  /* 媒体バッジ */
+  .platform-badge {
+    border: 1px solid currentColor;
+    padding: 2pt 4pt;
+  }
+
+  .platform-badge.google {
+    background: #e8f5e9 !important;
+    color: #2e7d32 !important;
+  }
+
+  .platform-badge.meta {
+    background: #e3f2fd !important;
+    color: #1565c0 !important;
+  }
+
+  .platform-badge.yahoo {
+    background: #fff3e0 !important;
+    color: #e65100 !important;
+  }
+
+  .platform-badge.line {
+    background: #e8f5e9 !important;
+    color: #00c300 !important;
+  }
+
+  /* -----------------------------------------------------
+     グラフエリア
+     ----------------------------------------------------- */
+  .chart-container {
+    border: 1px solid #ddd;
+    padding: 12pt;
+    margin-bottom: 16pt;
+    page-break-inside: avoid;
+  }
+
+  .chart-canvas-wrapper {
+    height: 200pt;
+  }
+
+  .chart-title {
+    font-size: 11pt;
+    margin-bottom: 8pt;
+  }
+
+  .chart-legend {
+    font-size: 8pt;
+  }
+
+  /* -----------------------------------------------------
+     リンクカード（印刷時は非表示または簡略化）
+     ----------------------------------------------------- */
+  .link-grid {
+    display: none;
+  }
+
+  /* -----------------------------------------------------
+     ページブレイク制御
+     ----------------------------------------------------- */
+  .page-break-before {
+    page-break-before: always;
+  }
+
+  .page-break-after {
+    page-break-after: always;
+  }
+
+  .avoid-break {
+    page-break-inside: avoid;
+  }
+
+  /* セクションの途中でページが切れないように */
+  .section {
+    page-break-inside: avoid;
+  }
+
+  /* テーブルのヘッダーを各ページで繰り返す */
+  .data-table thead {
+    display: table-header-group;
+  }
+
+  .data-table tbody {
+    page-break-inside: auto;
+  }
+
+  .data-table tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  /* -----------------------------------------------------
+     A4サイズ最適化
+     ----------------------------------------------------- */
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+
+  /* 1ページ目のヘッダーマージン調整 */
+  @page :first {
+    margin-top: 10mm;
+  }
+
+  /* -----------------------------------------------------
+     印刷専用表示要素
+     ----------------------------------------------------- */
+  .print-only {
+    display: block !important;
+  }
+
+  .print-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 8pt;
+    color: #666;
+    padding: 8pt;
+    border-top: 1px solid #ddd;
+  }
+
+  /* レポート生成日時 */
+  .print-timestamp {
+    text-align: right;
+    font-size: 8pt;
+    color: #666;
+    margin-bottom: 8pt;
+  }
+
+  /* -----------------------------------------------------
+     リンクのURL表示
+     ----------------------------------------------------- */
+  a[href]:after {
+    content: none; /* URLを表示しない（レポートが煩雑になるため） */
+  }
+
+  /* -----------------------------------------------------
+     画像最適化
+     ----------------------------------------------------- */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+}
+
+/* 印刷プレビュー時のみ表示する要素（通常は非表示） */
+.print-only {
+  display: none;
+}
