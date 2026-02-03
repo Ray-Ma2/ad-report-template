@@ -50,18 +50,26 @@ DEFAULT_COLUMN_MAPS = {
     "meta": {
         "date": ["日", "Day", "Date", "日付", "Reporting starts"],
         "campaign": [
+            "広告セット名",
             "キャンペーン名",
             "Campaign name",
             "Campaign Name",
             "キャンペーン",
         ],
-        "cost": ["消化金額", "Amount spent", "Amount Spent", "費用"],
+        "cost": [
+            "消化金額 (JPY)",
+            "消化金額",
+            "Amount spent",
+            "Amount Spent",
+            "費用",
+        ],
         "impressions": ["インプレッション", "Impressions", "リーチ"],
         "clicks": [
+            "クリック(すべて)",
+            "クリック（すべて）",
             "リンクのクリック",
             "Link clicks",
             "Clicks (all)",
-            "クリック（すべて）",
         ],
         "conversions": ["結果", "Results", "コンバージョン", "Conversions"],
     },
