@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>広告レポート</title>
+  <title>月別レポート</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -27,19 +27,30 @@
       </div>
     </header>
 
+    <nav class="breadcrumb">
+      <div class="container">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="index.html">サマリー</a></li>
+          <li class="breadcrumb-item active" id="breadcrumb-month"></li>
+        </ul>
+      </div>
+    </nav>
+
     <main class="main-content">
       <div class="container">
+        <!-- KPI -->
         <section class="section">
           <div class="section-header">
-            <h2 class="section-title">全体サマリー</h2>
+            <h2 class="section-title">月間サマリー</h2>
           </div>
-          <div class="kpi-grid" id="summary-kpi"></div>
+          <div class="kpi-grid" id="month-kpi"></div>
         </section>
 
+        <!-- 週次推移グラフ -->
         <section class="section">
           <div class="chart-container">
             <div class="chart-header">
-              <h3 class="chart-title">月次推移</h3>
+              <h3 class="chart-title">週次推移</h3>
               <div class="chart-legend">
                 <div class="chart-legend-item">
                   <span class="chart-legend-color" style="background:#3b82f6;"></span><span>広告費用</span>
@@ -49,47 +60,66 @@
                 </div>
               </div>
             </div>
-            <div class="chart-canvas-wrapper"><canvas id="monthly-chart"></canvas></div>
+            <div class="chart-canvas-wrapper"><canvas id="weekly-chart"></canvas></div>
           </div>
         </section>
 
+        <!-- 媒体別テーブル -->
         <section class="section">
           <div class="section-header">
-            <h2 class="section-title">媒体別サマリー</h2>
+            <h2 class="section-title">媒体別パフォーマンス</h2>
           </div>
           <div class="table-wrapper">
             <div class="table-scroll">
-              <table class="data-table" id="platform-summary-table">
+              <table class="data-table">
                 <thead>
                   <tr>
                     <th>媒体</th><th class="num">費用</th><th class="num">表示回数</th>
-                    <th class="num">クリック数</th><th class="num">CTR</th>
-                    <th class="num">CV</th><th class="num">CVR</th><th class="num">CPA</th>
+                    <th class="num">クリック</th><th class="num">CTR</th>
+                    <th class="num">CV</th><th class="num">CVR</th>
+                    <th class="num">CPA</th><th class="num">前月比CPA</th>
                   </tr>
                 </thead>
-                <tbody id="platform-table-body"></tbody>
+                <tbody id="platform-detail-body"></tbody>
               </table>
             </div>
           </div>
         </section>
 
+        <!-- キャンペーン別テーブル -->
         <section class="section">
-          <div class="chart-container">
-            <div class="chart-header">
-              <h3 class="chart-title">媒体別費用構成</h3>
-            </div>
-            <div class="chart-canvas-wrapper" style="height:250px;">
-              <canvas id="platform-chart"></canvas>
+          <div class="section-header">
+            <h2 class="section-title">キャンペーン別パフォーマンス</h2>
+          </div>
+          <div class="table-wrapper">
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>キャンペーン</th><th>媒体</th>
+                    <th class="num">費用</th><th class="num">表示</th>
+                    <th class="num">クリック</th><th class="num">CV</th><th class="num">CPA</th>
+                  </tr>
+                </thead>
+                <tbody id="campaign-table-body"></tbody>
+              </table>
             </div>
           </div>
         </section>
 
+        <!-- 週別リンク -->
         <section class="section">
           <div class="section-header">
-            <h2 class="section-title">月別レポート</h2>
+            <h2 class="section-title">週別レポート</h2>
           </div>
-          <div class="link-grid" id="month-links"></div>
+          <div class="link-grid" id="week-links"></div>
         </section>
+
+        <!-- 前後月ナビ -->
+        <nav class="page-nav no-print">
+          <a href="#" class="page-nav-link disabled" id="prev-month">← 前月</a>
+          <a href="#" class="page-nav-link disabled" id="next-month">次月 →</a>
+        </nav>
       </div>
     </main>
 
@@ -105,9 +135,12 @@
   <script src="../template/js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      var params = getParams();
       loadData('data.json').then(function(data) {
         if (!data) return;
-        renderSummaryPage(data);
+        var month = params.month || Object.keys(data.months).sort()[0];
+        document.title = month + ' レポート';
+        renderMonthlyPage(data, month);
         initTableSort();
       });
     });
